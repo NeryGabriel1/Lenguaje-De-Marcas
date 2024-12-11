@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    p,
+label {
+  font:
+    1rem 'Fira Sans',
+    "Times New Roman"
+}
+label{display: inline-block; width: 100px;}
+input {
+  width: 200px;
+}
+#marco,#colores{
+    margin:20px auto;
+    padding: 50px;
+    border:10px gold ridge;
+    border-radius: 25px;
+    width: 550px;
+}
+#colores{ height: 200px;}
+ 
+ #tablaAmortizacion{
+    text-align: right;
+ }
+
+ #table td{
+text-align: right;
+ }
+</style>
+<script>
+ 
+    var años;
+    var vcapital;
+    var vinteres;
+    var vmensualidad;
+/**********************************************************************************************/
+    function crearTabla(){
+        let im=vinteres/1200;
+        let cvivo=vcapital;
+        let meses=vaños*12;
+        let mensu=parseFloat(vmensualidad);
+        let intereses_capital;
+        let amortizacion_capital;
+        let suma_intereses_capital=0;
+        let suma_amortizacion_capital=0;
+        var cadena="<table align='center' border=1>";
+        cadena+="<tr><th>Meses</th>";
+        cadena+="<th>intereses_capital</th>";
+        cadena+="<th>amortizacion_capital</th>";
+        cadena+="<th>Capital Vivo</th>";
+        cadena+="<th>suma_intereses_capital</th>";
+        cadena+="<th>suma_amortizacion_capital</th>";
+        cadena+="</tr>";
+ 
+        for(let i=1;i<=meses;i++){
+            intereses_capital=cvivo*im;
+            amortizacion_capital=mensu-intereses_capital;
+            suma_intereses_capital+=intereses_capital;
+            suma_amortizacion_capital+=amortizacion_capital;
+ 
+            cadena+="<tr><th> "+i+"</th>";
+            cadena+="<th>"+intereses_capital.toFixed(2)+"</t>";
+            cadena+="<th>"+amortizacion_capital.toFixed(2)+"</th>";
+            cadena+="<th>"+cvivo.toFixed(2)+"</th>";
+            cadena+="<th>"+suma_intereses_capital.toFixed(2)+"</th>";
+            cadena+="<th>"+suma_amortizacion_capital.toFixed(2)+"</th>";
+            cadena+="</tr>";
+ 
+            cvivo-=amortizacion_capital;
+        }
+        document.getElementById("tablaAmortizacion").innerHTML=cadena;
+ 
+    }
+/**********************************************************************************************/
+    function calculaMensualidad(){
+        vaños=parseInt(document.getElementById("años").value);
+        vcapital=parseInt(document.getElementById("capital").value)*1000;
+        vinteres=parseFloat(document.getElementById("interes").value);
+        //alert(vcapital+" "+vinteres+" "+vaños);
+        mensualidad(vcapital,vinteres,vaños);
+        crearTabla();
+    }
+/**********************************************************************************************/
+function mensualidad(CAPITAL,IANUAL,AÑOS){
+    let meses=AÑOS*12;
+    let interesMensual=IANUAL/1200;
+    vmensualidad=((CAPITAL*interesMensual)/(1-Math.pow(1+interesMensual,-meses))).toFixed(2);
+ 
+    document.getElementById("mensualidad").innerHTML="Mensualidad: "+vmensualidad+" €";
+}
+/**********************************************************************************************/
+ 
+  function inicio(){
+    rellenar(document.getElementById("saños"),25,75,5);
+    rellenar(document.getElementById("scapital"),150000,3000000,50000);
+    rellenar(document.getElementById("sinteres"),3,6,0.5);
+ 
+    ['capital','años','interes'].forEach((elemento)=>{
+        var op=document.getElementById(elemento);
+        op.addEventListener("input",function(){cambioSelect(op);})
+        });
+
+        document.getElementById("años").value=25;
+        document.getElementById("capital").value=150;
+        document.getElementById("interes").value=3;
+        calculaMensualidad();
+
+        ['capital','años','interes'].forEach((elemento)=>{
+        var op=document.getElementById("s"+elemento)
+        cambio(op)
+        ;});
+
+  }  
+/**********************************************************************************************/
+    function rellenar(destino,li,ls,inc){
+        for(let i=li;i<=ls;i+=inc){
+        let op=document.createElement("option");
+        op.text=i;
+        op.value=i;
+        destino.appendChild(op);
+    }
+    destino.addEventListener("change",function(){cambio(destino);})
+    }
+     /**********************************************************************************************/
+     function cambioSelect(origen){
+        let op='s'+origen.id;
+        let destino=document.getElementById(op);
+        let n=destino.options.length;
+        let busco=op=='scapital' ? origen.value*1000  : origen.value;
+       
+        for(let i=0;i<n;i++){
+            if (destino.options[i].value==busco){
+                destino.selectedIndex=i;
+                break;
+            }
+        }
+         calculaMensualidad();
+     }
+    /**********************************************************************************************/
+    function cambio(origen){
+        let op=(origen.id).substring(1);
+        document.getElementById(op).value= op=='capital' ? origen.value/1000  : origen.value;
+        calculaMensualidad();    
+    }
+     /**********************************************************************************************/
+     window.addEventListener('load', () => {inicio(); calculaMensualidad();});
+ </script>
+</head>
+ 
+ 
+0
+<body>
+<div id="marco">
+    <p>Credito Hipotecario:</p>
+ 
+<div>
+  <label for="Capital">Capital</label>
+  <input type="range" id="capital" min="150" max="3000" step="50" />
+  <select  id="scapital"></select>
+ 
+</div>
+ 
+<div>
+  <label for="Interes Anual">Interes Anual</label>
+  <input   type="range" id="interes"  min="1" max="6" step="0.5" />
+  <select  id="sinteres"></select>
+</div>
+<div>
+    <label for="Años">Años Credito</label>
+    <input   type="range" id="años"  min="20" max="75" step="5"/>
+    <select  id="saños"></select>
+  </div>
+ </div>
+  <p style="text-align:center" id="mensualidad"></p>
+ 
+<div id="tablaAmortizacion">
+ 
+</div>
+</body>
+</html>

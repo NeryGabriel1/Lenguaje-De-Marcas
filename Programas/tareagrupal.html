@@ -1,0 +1,340 @@
+<!DOCTYPE 
+<html>
+<head>
+    <title>Mi primer página web</title>
+ 
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        
+        <title>Elementos HTML y Descripciones</title>
+        <H1>Los intregrantes son: Pedro, Eduardo 
+            , Nery </H1>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Elemento HTML</th>
+                <th>Descripción</th>
+                <th>Ejemplos</th>
+                <th>Ejecucion</th>
+            </tr>
+            <tr>
+                <td><code>&lt;address&gt;</code></td>
+                <td>Utilizado para definir información de contacto, como dirección, teléfono y correo electrónico. El texto se muestra en cursiva.</td>
+                <td><code>&lt;address&gt; Jhon Smith <br> &lt;a href="mailto:jhons54684@example.com"&gt; jhons54684@example.com &lt;/a&gt; <br> 107 Springtime Boulevard <br> Mountain View, CA <br> +256 4481-546585 &lt;/address&gt;</code></td>
+                <td><address> Jhon Smith <br> <a href="mailto:jhons54684@example.com"> jhons54684@example.com </a> <br> 107 Springtime Boulevard <br> Mountain View, CA <br> +256 4481-546585 </address>
+                </td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Representa una sección autónoma de contenido en una página, como un artículo o una publicación de blog. Debe incluir su propio encabezado.</td>
+                <td>&lt;article class="day-forecast"&gt;
+                    &lt;h2&gt;04 March 2018&lt;/h2&gt;
+                    &lt;p&gt;Periods of rain.&lt;/p&gt;
+                    &lt;/article&gt;</td>
+                <td>
+                    <article class="day-forecast">
+                        <h2>04 March 2018</h2>
+                        <p>Periods of rain.</p>
+                      </article></td>
+            </tr>
+            <tr>
+                <td><code>&lt;aside&gt;</code></td>
+                <td>Define contenido relacionado o complementario que se encuentra fuera del flujo principal del contenido de la página. Puede contener anuncios, notas o enlaces relacionados.</td>
+                    <td>&lt;aside&gt;
+                    &lt;h4&gt;Epcot Center&lt;/h4&gt;
+                    &lt;p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.&lt;/p&gt;
+                    &lt;/aside&gt;
+                    <td><aside>
+                    <h4>Epcot Center</h4>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                    </aside></td>
+            </tr>
+            <tr>
+                <td><code>&lt;blockquote&gt;</code></td>
+                <td>Se utiliza para citar una sección de texto de otra fuente. Puede incluir la fuente de la cita utilizando el atributo <code>cite</code>.</td>
+                <td>&lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+                    For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+                    &lt;/blockquote&gt;</td>
+                <td><blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+                    </blockquote></td>
+            </tr>
+            <tr>
+                <td><code>&lt;details&gt;</code></td>
+                <td>Crea un elemento plegable que puede mostrarse u ocultarse para revelar contenido adicional. Utiliza el elemento <code>&lt;summary&gt;</code> para proporcionar un título.</td>
+                <td>&lt;details&gt;
+                    &lt;summary&gt;Epcot Center&lt;/summary&gt;
+                    &lt;p&gt;Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.&lt;/p&gt;
+                    &lt;/details&gt;</td>
+                <td><details>
+                    <summary>Epcot Center</summary>
+                    <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                  </details></td>
+            </tr>
+            <tr>
+                <td><code>&lt;dialog&gt;</code></td>
+                <td>Define una ventana de diálogo o una caja de mensaje interactiva que puede abrirse o cerrarse. Puedes agregar contenido dentro del diálogo.</td>
+                <td>&lt;dialog open&gt;This is an open dialog window&lt;/dialog&gt;</td>
+                <td><dialog open>This is an open dialog window</dialog></td>
+            </tr>
+            <tr>
+                <td><code>&lt;div&gt;</code></td>
+                <td>Un contenedor genérico que no tiene significado semántico propio. Se utiliza para agrupar y estructurar contenido de manera flexible.</td>
+                <td>&lt;div&gt; <br>
+                    &lt;p&gt;Esto es un div genérico para contener contenido.&lt;/p&gt;<br>
+                    &lt;/div&gt;<br></td>
+                    <td><div><br>
+                        <p>Esto es un div genérico para contener contenido.</p><br>
+                        </div><br></td>
+            </tr>
+            <tr>
+                <td><code>&lt;dl&gt;</code></td>
+                <td>Crea una lista de definición que consta de pares de términos (<code>&lt;dt&gt;</code>) y sus definiciones (<code>&lt;dd&gt;</code>).</td>
+                <td> &lt;dl&gt;<br>
+                    &lt;dt&gt;Término 1 &lt;/dt&gt; <br>
+                    &lt;dd&gt;Definición 1 &lt;/dd&gt;<br>
+                    &lt;dt&gt;Término 2 &lt;/dt&gt;<br>
+                    &lt;dd&gt;Definición 2 &lt;/dd&gt;<br>
+                    &lt;/dl&gt;<br></td>
+                    <td><dl>
+                        <dt>Término 1</dt>
+                        <dd>Definición 1</dd>
+                        <dt>Término 2</dt>
+                        <dd>Definición 2</dd>
+                    </dl></td>
+            </tr>
+            <tr>
+                <td><code>&lt;dt&gt;</code></td>
+                <td>Representa un término en una lista de definición (<code>&lt;dl&gt;</code>) que precede a su definición (<code>&lt;dd&gt;</code>).</td>
+                <td>&lt;dt&gt;Término 1 &lt;/dt&gt; <br></td>
+                <td><dt>Término 1</dt></td>
+            </tr>
+            <tr>
+                <td><code>&lt;dd&gt;</code></td>
+                <td>Representa la definición de un término en una lista de definición (<code>&lt;dl&gt;</code>) que sigue a su término (<code>&lt;dt&gt;</code>).</td>
+                <td>&lt;dd&gt;Definición 1 &lt;/dd&gt;<br></td>
+                <td><dd>Definición 1</dd></td>
+            </tr>
+            <tr>
+                <td><code>&lt;figure&gt;</code></td>
+                <td>Utilizado para envolver contenido relacionado, como imágenes, gráficos, diagramas o tablas, junto con una descripción (<code>&lt;figcaption&gt;</code>).</td>
+                <td>&lt;figure&gt;<br>
+                    &lt;img&gt; src="C:\Users\Usuario\Desktop\ElementosBloque\Img\paisaje.jpg" alt="Ejemplo de una imagen"><br>
+                    &lt;/figure&gt;<br></td>
+                <td><figure> <br>
+                        <img src="C:\Users\Usuario\Desktop\ElementosBloque\Img\paisaje.jpg" alt="Ejemplo de una imagen">
+                      </figure></td>
+            
+            </tr>
+            <tr>
+                <td><code>&lt;figcaption&gt;</code></td>
+                <td>Proporciona una descripción o leyenda para el contenido encapsulado en un elemento <code>&lt;figure&gt;</code>.</td>
+                <td>&lt;figcaption&gt;Esta es una imagen de ejemplo con una descripción.&lt;/figcaption&gt;<br></td>
+                <td><figcaption>Esta es una imagen de ejemplo con una descripción.</figcaption></td>
+            </tr>
+            <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Define el pie de página de un documento o una sección de la página. Suele incluir información de autoría, derechos de autor, enlaces de contacto, etc.</td>
+                <td>&lt;footer&gt;
+                    &lt;p&gt;Autor: Hege Refsnes&lt;br&gt;
+                    &lt;a href="mailto:hege@example.com">hege@example.com&lt;a&gt;&lt;/p&gt;
+                    &lt;footer&gt;</td>
+                <td><footer>
+                    <p>Autor: Hege Refsnes<br>
+                    <a href="mailto:hege@example.com">hege@example.com</a></p>
+                  </footer></td>
+            </tr>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Define la cabecera de un documento o una sección de la página. Usualmente contiene elementos de encabezado, logotipos y menús de navegación.</td>
+                <td>&lt;header&gt;
+                    &lt;h1>el fubtol&lt;/h1&gt;
+                    &lt;p>gano el madrid&lt;/p&gt;
+                    &lt;/header&gt;</td>
+                <td><header>
+                    <h1>el fubtol</h1>
+                    <p>gano el madrid</p>
+                    </header></td>
+            </tr>
+            <tr>
+                <td><code>&lt;hr&gt;</code></td>
+                <td>Crea una línea horizontal para separar secciones de contenido en una página. No requiere etiqueta de cierre.</td>
+                <td><&lt;&gt;
+
+                    &lt;p&gt;fue toda una sensacion la monalisa.&lt;/p&gt;
+                    
+                    &lt;hr&gt;</td>
+                <td><hr>
+
+                    <p>fue toda una sensacion la monalisa.</p>
+                    
+                    <hr></td>        
+            </tr>
+            <tr>
+                <td><code>&lt;li&gt;</code></td>
+                <td>Elemento de lista utilizado dentro de <code>&lt;ul&gt;</code> o <code>&lt;ol&gt;</code> para representar elementos de una lista, como elementos de menú o elementos de lista de tareas.</td>
+                <td>&lt;li&gt;cereal&lt;/li&gt;
+                    &lt;li&gt;leche&lt;/li&gt;
+                    &lt;li&gt;pan&lt;/li&gt;</td>
+                <td><li>cereal</li>
+                    <li>leche</li>
+                    <li>pan</li></td>
+            </tr>
+            <tr>
+                <td><code>&lt;main&gt;</code></td>
+                <td>Define el contenido principal de un documento o de la página web. Debe ser único en la página y abarcar la mayor parte del contenido visible.</td>
+                <td>&lt;main&gt;
+                    &lt;h1&gt;Los navegadores más populares&lt;/h1&gt;
+                    &lt;p&gt;Edge es el navegadores más utilizados hoy en día.&lt;/p&gt;
+                  
+                    &lt;article&gt;
+                    &lt;h2&gt;Microsoft Edge&lt;/h2&gt;
+                    &lt;p&gt;Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge reemplazó a Internet Explorer.&lt;/p&gt;
+                    <&lt;article&gt;
+                    &lt;/main&gt;</td>
+                <td><main>
+                    <h1>Los navegadores más populares</h1>
+                    <p>Edge es el navegadores más utilizados hoy en día.</p>
+                  
+                      <article>
+                      <h2>Microsoft Edge</h2>
+                      <p>Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge reemplazó a Internet Explorer.</p>
+                    </article>
+                  </main></td>
+            </tr>
+            <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Define una sección de navegación en una página web. Usualmente contiene enlaces a otras partes de la página o a otras páginas.</td>
+                <td>&lt;nav&gt;
+                    &lt;a href="/html/"&gt;Java&lt;/a&gt; |
+                    &lt;a href="/python/"&gt;Python&lt;/a&gt;
+                    &lt;/nav&gt;
+                    </td>
+                <td><nav>
+                    <a href="/html/">Java</a> |
+                    <a href="/python/">Python</a>
+                    </nav>
+                    </td>
+            </tr>
+            <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>Crea un párrafo de texto en la página web. Se utiliza para estructurar y separar el texto en párrafos.</td>
+                <td>&lt;p&gt;Tengo hambre.&lt;/p&gt;</td>
+                <td><p>Tengo hambre.</p></td>
+            </tr>
+            <tr>
+                <td><code>&lt;pre&gt;</code></td>
+                <td>Muestra el texto preformateado, lo que significa que mantiene espacios en blanco, tabulaciones y saltos de línea tal como están escritos.</td>
+                <td>&lt;pre&gt;
+                    El texto en un elemento pre
+                    se muestra en una fuente de ancho fijo
+                    y conserva tanto los espacios como
+                    saltos de línea
+                    &lt;/pre&gt;</td>
+                <td><pre>
+                    El texto en un elemento pre
+                    se muestra en una fuente de ancho fijo
+                    y conserva tanto los espacios como
+                    saltos de línea
+                    </pre></td>
+            </tr>
+            <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Define una sección lógica o temática de un documento o de una página web. Puede contener contenido relacionado o agrupado por tema.</td>
+                <td>&lt;section&gt;
+                    &lt;h2&gt;Historia del WWF&lt;/h2&gt;
+                    &lt;p&gt;El Fondo Mundial para la Naturaleza (WWF) es una organización internacional que trabaja en temas relacionados con la conservación, investigación y restauración del medio ambiente, anteriormente conocida como el Fondo Mundial para la Vida Silvestre. El WWF fue fundado en 1961.&lt;/p&gt;
+                    &lt;/section&gt;</td>
+                <td><section>
+                    <h2>Historia del WWF</h2>
+                    <p>El Fondo Mundial para la Naturaleza (WWF) es una organización internacional que trabaja en temas relacionados con la conservación, investigación y restauración del medio ambiente, anteriormente conocida como el Fondo Mundial para la Vida Silvestre. El WWF fue fundado en 1961.</p>
+                    </section></td>
+            </tr>
+            <tr>
+                <td><code>&lt;form&gt;</code></td>
+                <td>Define un formulario que se utiliza para recopilar datos del usuario. Puede contener campos de entrada, botones y otros elementos relacionados con el formulario.</td>
+                <td>&lt;form action="/action_page.php" method="get">
+                    &lt;label for="fname"&gt;Nombre:&lt;/label&gt;
+                    &lt;input type="text" id="fname" name="fname"&gt;<br><br>
+                    &lt;label for="lname"&gt;Apellido:&lt;/label&gt;
+                    &lt;input type="text" id="lname" name="lname"&gt;<br><br>
+                    &lt;input type="submit" value="Enviar"&gt;
+                    &lt;/form&gt;</td>
+                <td><form action="/action_page.php" method="get">
+                    <label for="fname">Nombre:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Apellido:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Enviar">
+                  </form></td>
+            </tr>
+            <tr>
+                <td><code>&lt;fieldset&gt;</code></td>
+                <td>Agrupa elementos de formulario relacionados y opcionalmente incluye una leyenda. Se utiliza para mejorar la accesibilidad y la estructura de los formularios.</td>
+                <td>&lt;fieldset>
+                    &lt;legend&gt;Información personal:</legend&gt;
+                    &lt;label for="fname"&gt;Nombre:&lt;/label&gt;
+                    &lt;input type="text" id="fname" name="fname"&gt;<br><br>
+                    &lt;label for="lname"&gt;Apellido:&lt;/label&gt;
+                    &lt;input type="text" id="lname" name="lname"&gt;<br><br>
+                    &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email"&gt;<br><br>
+                    &lt;label for="birthday"&gt;Fecha de nacimiento:&lt;/label&gt;
+                    &lt;input type="date" id="birthday" name="birthday"&gt;<br><br>
+                    &lt;input type="submit" value="Enviar"&gt;
+                    &lt;/fieldset&gt;</td>
+                <td><fieldset>
+                    <legend>Información personal:</legend>
+                    <label for="fname">Nombre:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Apellido:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="birthday">Fecha de nacimiento:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    <input type="submit" value="Enviar">
+                   </fieldset></td>
+            </tr>
+            <tr>
+                <td><code>&lt;table&gt;</code></td>
+                <td>Define una tabla que contiene filas (<code>&lt;tr&gt;</code>), celdas de encabezado (<code>&lt;th&gt;</code>) y celdas de datos (<code>&lt;td&gt;</code>).</td>
+                <td>&lt;table&gt;
+                    &lt;tr&gt;
+                    &lt;th&gt;Mes&lt;/th&gt;
+                    &lt;th&gt;Presuspuesto&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Enero&lt;/td&gt;
+                      &lt;td&gt;$100&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Febrero&lt;/td&gt;
+                      &lt;td&gt;$80&lt;/td&gt;
+                      &lt;/tr&gt;
+                    &lt;/table&gt;</td>
+                <td><table>
+                    <tr>
+                      <th>Mes</th>
+                      <th>Presuspuesto</th>
+                    </tr>
+                    <tr>
+                      <td>Enero</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Febrero</td>
+                      <td>$80</td>
+                    </tr>
+                  </table></td>
+            </tr>
+        </table>
+    </body>
+    </html>
+
+</body>
+</html>

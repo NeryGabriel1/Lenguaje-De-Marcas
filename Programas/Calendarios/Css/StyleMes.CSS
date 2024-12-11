@@ -1,0 +1,42 @@
+-- que el caption salgan uno detras de otro y el marco tambien
+#contenedor{
+    width: 768px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFF;
+    border: 1px solid silver;
+    text-align: center;
+}
+#parametros{
+    width: 300px;
+    margin: 0px auto 20px auto;
+    text-align: center;
+}
+h2{
+    margin-bottom: 1.3em;
+    font: normal 30pt Arial;
+    color: #15015B;
+    text-shadow: 0 1px 0 #CCC,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+#divaños,#divmeses{
+    width: 100px;
+    margin: 0px auto 20px auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(73,199,185,0.70);
+    text-shadow: 2px 2px 0px rgba(92,92,92,1.00);
+    -webkit-box-shadow: 5px 5px 5px 2px rgba(43,35,36,1.00);
+    box-shadow: 5px 5px 5px 2px rgba(43,35,36,1.00);
+    text-align:center;
+}

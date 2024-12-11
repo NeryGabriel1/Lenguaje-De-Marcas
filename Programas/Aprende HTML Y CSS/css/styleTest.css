@@ -1,0 +1,64 @@
+body{
+    background-color: blue;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: calibri;
+    font-size: 120%;
+}
+
+.contenedor{
+    width: 90vw;
+    height: 92vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0fr;
+    
+}
+
+.encabezado{
+    background-color: white;
+    min-width: 300px;
+    width: 70%;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.categoria{
+    opacity: 0.3;
+    text-align: left;
+}
+
+.pregunta{
+    padding: 10px;
+}
+
+
+
+/*Para representar una imagen en las preguntas*/
+.imagen{
+    object-fit: scale-down;
+    height: 200px;
+    width: 30%;
+}
+
+/*Para dar estilo a los botones de opción*/
+.btn{
+    background: white;
+    width: 60%;
+    max-width: 550px;
+    padding: 10px;
+    margin: 5px;
+}
+/*Cambiar el color del botón cuando se ejecute*/
+.btn:hover{
+    background: orange;
+    cursor: pointer;
+}
+
+/*Para aplicar una transición suave a todos los elementos*/
+*{
+    transition: all 0.3s;
+}

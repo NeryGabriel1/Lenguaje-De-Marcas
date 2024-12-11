@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Posicionamiento absoluto relativo: relative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #padre {
+      position:relative;
+      width: 50vw;
+      height: 75vh;
+      border: 15px ridge gold;
+      padding: 20px;
+      left:50%;
+      margin-top: 20px;
+      transform: translate(-50%, 0%);
+    }
+    #padre div{
+      width: 30%;
+      height: 30%;
+      background-color: gainsboro;
+      font-size: 100px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #tres {
+      position:absolute;
+      top:0px;
+      left:0px;
+      bottom: 0px;
+      right: 0px;
+      margin:auto;
+    }
+    #uno{
+      position:absolute;
+      top:0px;
+      left:0px;
+    }
+    #dos{
+      position:absolute;
+      top:0px;
+      right:0px;
+    }
+    #cuatro{
+      position:absolute;
+      bottom:0px;
+      left:0px;
+    }
+    #cinco{
+      position:absolute;
+      bottom:0px;
+      right:0px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="padre">
+    <div id="uno" >A</div>
+    <div id="dos" >B</div>
+    <div id="tres" >C</div>
+    <div id="cuatro" >D</div>
+    <div id="cinco" >E</div>
+  </div>
+
+
+
+</body>
+
+</html>

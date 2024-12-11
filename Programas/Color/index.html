@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+
+    <style>
+        #marco {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0px auto;
+            margin-bottom: 20px;
+            width: 500px;
+            height: 300px;
+
+            border: 10px solid rgb(255, 191, 73);
+            border-radius: 15px;
+
+        }
+
+        #colores {
+            margin: 0px auto;
+            margin-bottom: 20px;
+            width: 500px;
+            height: 300px;
+            border: 10px solid rgb(255, 191, 73);
+            border-radius: 15px;
+        }
+    </style>
+
+    <script>
+        function rellenar(selectElement, min, max) {
+            for (let i = min; i <= max; i++) {
+                let option = document.createElement("option");
+                option.text = i;
+                selectElement.add(option);
+            }
+        }
+        function scambio(quien) {
+            let n = quien.value;
+            let destino = (quien.id).substring(1);
+            document.getElementById(destino).value = n;
+            cambioSelect();
+        }
+        function inicioNew(color) {
+            //Para los select
+            let destino = "s" + color;
+            let v = document.getElementById(destino);
+            let ls = color == "alfa" ? 10 : 255
+            rellenar(v, 0, ls);
+            v.addEventListener('change', () => { scambio(v); });
+
+            //Para los input range
+            let w = document.getElementById(color);
+            w.addEventListener('input', () => { cambio(w); });
+            cambio(w);
+        }
+
+        /**********************************************************************************/
+        function cambioSelect() {
+            let destino = document.getElementById("colores");
+            let vrojo = parseInt(document.getElementById("rojo").value);
+            let vverde = parseInt(document.getElementById("verde").value);
+            let vazul = parseInt(document.getElementById("azul").value);
+            let valfa = parseInt(document.getElementById("alfa").value) / 10;
+            destino.style.backgroundColor = 'rgba(' + vrojo + ',' + vverde + ',' + vazul + ',' + valfa + ')';
+
+            let otrodestino = "s" + quien.id;
+            document.getElementById(otrodestino).selectedIndex = quien.value;
+        }
+        /**********************************************************************************/
+        function inicio() {
+            ["rojo", "verde", "azul", "alfa"].forEach((c) => { inicioNew(c); });
+        }
+        /**********************************************************************************/
+        function cambio(quien) {
+            let destino = document.getElementById("colores");
+            let vrojo = parseInt(document.getElementById("rojo").value);
+            let vverde = parseInt(document.getElementById("verde").value);
+            let vazul = parseInt(document.getElementById("azul").value);
+            let valfa = parseInt(document.getElementById("alfa").value) / 10;
+            destino.style.backgroundColor = 'rgba(' + vrojo + ',' + vverde + ',' + vazul + ',' + valfa + ')';
+
+            let otrodestino = "s" + quien.id;
+            document.getElementById(otrodestino).selectedIndex = quien.value;
+        }
+        /**********************************************************************************/
+        window.addEventListener('load', () => { inicio(); });
+    </script>
+</head>
+
+<body>
+    <label for=""></label>
+    <div id="marco">
+        <p>Cambio de colores:</p>
+
+        <div>
+            <label for="rojo">Rojo&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" id="rojo" min="0" max="255" value="255" />
+            <select id="srojo"></select>
+        </div>
+
+        <div>
+            <label for="verde">Verde&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" id="verde" min="0" max="255" value="255" />
+            <select id="sverde"></select>
+        </div>
+        <div>
+            <label for="azul">Azul&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" id="azul" min="0" max="255" value="255" />
+            <select id="sazul"></select>
+        </div>
+        <div>
+            <label for="alfa">Opacidad</label>
+            <input type="range" id="alfa" min="0" max="10" value="10" step="1" />
+            <select id="salfa"></select>
+        </div>
+    </div>
+    <div id="colores">
+
+    </div>
+</body>
+
+</html>

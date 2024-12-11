@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            text-align: center;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+    </style>
+    <script>
+        var cadena = "Me enamore de ella";
+        var n = 0;
+
+        function cambio() {
+            n++;
+            let variable = document.getElementById("mensaje");
+            variable.innerHTML = cadena.substring(0, n);
+            if(n==cadena.length)n=0;
+        }
+        function inicio() {
+            setInterval(function () { cambio(); }, 500)
+        }
+    </script>
+</head>
+
+<body onload="inicio()">
+    <div id="marco">
+        <p id="mensaje"></p>
+    </div>
+</body>
+
+</html>

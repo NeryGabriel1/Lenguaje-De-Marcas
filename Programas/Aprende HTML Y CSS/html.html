@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Aprendamos HTML y CSS</title>
+  <link rel="stylesheet" type="text/css" href="css/styleInfor.css">
+</head>
+
+<body>
+  <div class="mac-bar">
+    <div class="mac-button html"><span><a href="html.html" class="enlace">HTML</a></span></div>
+    <div class="mac-button css"><span><a href="css.html" class="enlace">CSS</a></span></div>
+    <div class="mac-button test"><span><a href="java/test.html" class="enlace">TEST</a></span></div>
+    <div class="title">Aprendamos HTML</div>
+    <div class="mac-button gris"><span><a href="#menu">Menú</a></span></a></div>
+    <div class="mac-button gris"><span><a href="contacto.html">Contacto</a></span></a></div>
+    <div class="mac-button gris"><span><a href="index.html">Inicio</a></span></a></div>
+
+  </div>
+  <section id="Inicio">
+    <div class="cajaprincipal" id="menu">
+      <div class="landing_left">
+        <div class="cajaencabezado">
+          <div class="landing_text up">
+            <h1 class="encabezado">AULA INFORMÁTICA</h1>
+          </div>
+          <div class="landing_text mid">
+            <h1 class="encabezado">LENGUAJE DE MARCADO</h1>
+          </div>
+          <div class="landing_text down">
+            <h1>Clase de HTML</h1>
+          </div>
+        </div>
+      </div>
+      <div class="landing_right">
+        <div class="cajadirecciones">
+
+          <div class="item">
+            <a href="#quees" class="enlace">
+              <div class="landing_img" style="background-color: #DBE5EE;">
+                <img src="img/hazul.svg" alt="Hoja azul">
+              </div>
+              <h2>¿Qué es?</h2>
+            </a>
+
+          </div>
+          <div class="item">
+            <a href="#estructura_html" class="enlace">
+              <div class="landing_img" style="background-color: #5CD1FF;">
+                <img src="img/notas.svg" alt="">
+              </div>
+              <h2>Estructura de HTML</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#etiquetas_html" class="enlace">
+              <div class="landing_img" style="background-color: #FF8E51;">
+                <img src="img/semantico.svg" alt="Persona">
+              </div>
+              <h2>Etiquetas semánticas</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#elementos_html" class="enlace">
+              <div class="landing_img" style="background-color: #F9B2DC;">
+
+                <img src="img/reloj.svg" alt="">
+              </div>
+              <h2>Elementos</h2>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#atributos_html" class="enlace">
+              <div class="landing_img" style="background-color: #FFD83F;">
+                <img src="img/dipple.svg" alt="">
+              </div>
+              <h2>Atributos HTML</h2>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#practica_html" class="enlace">
+              <div class="landing_img" style="background-color: #9C8BEF;">
+                <img src="img/pruebatest.svg" alt="">
+              </div>
+              <h2>Prácticas</h2>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="generalbox">
+    <!-- El que es -->
+    <section id="Que es Html">
+      <h2>¿Que es Html?</h2>
+      <p>HTML es el acrónimo de HyperText Markup Language. Es un lenguaje de marcado que se utiliza para crear páginas
+        web y aplicaciones web. Básicamente, HTML se compone de etiquetas que se utilizan para definir la estructura
+        y el contenido de una página web. Cada etiqueta tiene un propósito específico y se utiliza para definir
+        diferentes tipos de elementos, como encabezados, párrafos, imágenes, enlaces, formularios, entre otros.</p>
+      <br>
+      <p>HTML es un lenguaje muy fácil de aprender y es la base de la mayoría de las páginas web que se ven en Internet
+        hoy en día.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QWAXngosZmE" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <!-- La Estructura -->
+    <section id="estructura_html"></section>
+    <h2>Estructura de una página HTML</h2>
+    <p>La estructura básica de una página HTML consta de los siguientes elementos:<br>&lt;!DOCTYPE html&gt;: Este es el
+      doctype, y su presencia es necesaria para que el navegador interprete correctamente el documento como HTML5.<br>
+      &lt;html&gt;: Este es el elemento raíz del documento HTML.<br>
+      &lt;head&gt;: Este elemento contiene metadatos del documento, que no se muestran en la página web, pero son útiles
+      para los navegadores y los motores de búsqueda. Algunos de los elementos que puedes encontrar dentro de
+      &lt;head&gt; incluyen:<br>
+      &lt;title&gt;: Define el título del documento, que se muestra en la barra de título del navegador o en la pestaña
+      del navegador.<br>
+      &lt;meta&gt;: Se utiliza para especificar el conjunto de caracteres, la descripción de la página, las palabras
+      clave, el autor del documento y la vista de puerto.<br>
+      &lt;link&gt;: Se utiliza para enlazar hojas de estilo externas.<br>
+      &lt;style&gt;: Se utiliza para escribir CSS interno.<br>
+      &lt;script&gt;: Se utiliza para enlazar y escribir JavaScript.<br>
+      &lt;body&gt;: Este elemento contiene el contenido principal que se muestra a los usuarios cuando visitan tu página
+      web. Puede contener texto, imágenes, tablas, enlaces, formularios, etc.<br>
+      Dentro del &lt;body&gt;, puedes tener una variedad de otros elementos HTML, como &lt;h1&gt; a &lt;h6&gt; para
+      encabezados, &lt;p&gt; para párrafos, &lt;a&gt; para enlaces, &lt;img&gt; para imágenes, &lt;div&gt; y
+      &lt;span&gt; para agrupar contenido, &lt;ul&gt; y &lt;ol&gt; para listas, &lt;table&gt; para tablas, y muchos
+      más.<br>
+      Aquí tienes un ejemplo de cómo se ve una estructura HTML básica:</p><br>
+    <code>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html&gt;<br>
+          &lt;head&gt;<br>
+            &lt;title&gt;Título de la página&lt;/title&gt;<br>
+          &lt;/head&gt;<br>
+          &lt;body&gt;<br>
+           &lt;h1&gt;Este es un encabezado&lt;/h1&gt;<br>
+            &lt;p&gt;Este es un párrafo.&lt;/p&gt;<br>
+          &lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+        </code>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/J0Qv29n9PN4" frameborder="0"
+      allowfullscreen></iframe>
+    </section>
+
+    <section id="etiquetas_html">
+      <h2>Etiquetas semanticas</h2>
+      <p>Las etiquetas semánticas en HTML son aquellas que proporcionan información sobre el tipo de contenido que
+        contienen, lo que ayuda a los motores de búsqueda a entender mejor la estructura y el contenido de la página
+        web. Aquí tienes algunos ejemplos de etiquetas semánticas en HTML:</p>
+      <dir>
+        <table border="1">
+          <tr>
+            <th>Etiqueta HTML</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>Representa un grupo de ayudas introductorias o de navegación. También puede contener logos, formulario
+              de búsqueda o tabla de contenidos.</td>
+            <td>
+              <header>Contenido del encabezado</header>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;nav&gt;</code></td>
+            <td>Sección de una página que enlaza a otras páginas o partes de la misma. Una sección con links de
+              navegación.</td>
+            <td>
+              <nav>Contenido de la navegación</nav>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;</code></td>
+            <td>Sección de una página que contiene contenido relacionado tangencialmente al de su alrededor. Por lo
+              general se utilizan como barras laterales.</td>
+            <td>
+              <aside>Contenido del aside</aside>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;main&gt;</code></td>
+            <td>Representa el contenido predominante de la página. Una página debe tener solo un tag <main>.</td>
+            <td>
+              <main>Contenido principal</main>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;</code></td>
+            <td>Representa una sección de contenido que puede ser distribuido de forma independiente. Puede ser un post
+              en un foro, un articulo de periódico, una entrada de un blog, un comentario, etc.</td>
+            <td>
+              <article>Contenido del artículo</article>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>Representa a una sección genérica de una página. Agrupa contenidos que tienen una relación temática
+              entre sí.</td>
+            <td>
+              <section>Contenido de la sección</section>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Representa un pie de página para el elemento que lo contiene. Generalmente contiene información acerca
+              de quién lo escribió, enlaces a documentos relacionados, datos de derechos de autor o similares.</td>
+            <td>
+              <footer>Contenido del pie de página</footer>
+            </td>
+          </tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FeXpLU515AI" frameborder="0"
+          allowfullscreen></iframe>
+      </dir>
+
+
+    </section>
+
+    <!-- Esto es un los Elementos -->
+    <section id="elementos_html">
+      <h2>Elementos HTML</h2>
+      <p>Un elemento HTML se define usando etiquetas de inicio y fin. Por ejemplo,
+      <h1>Texto de encabezado</h1>.</p>
+      <h2>Elemento de bloques</h2>
+      <p>Los elementos de bloque en HTML son aquellos que, por defecto, ocupan todo el ancho disponible de su contenedor
+        y crean un salto de línea antes y después de ellos.
+        Estos elementos se utilizan para estructurar el contenido de una página web en secciones, como encabezados,
+        párrafos, listas, tablas, formularios, entre otros. Aqui dejaremos
+        los ejemplo y su manera de ejecucion:</p>
+      <dir>
+        <table border="1">
+          <tr>
+            <th>Elemento HTML</th>
+            <th>Descripción</th>
+            <th>Ejemplos</th>
+            <th>Ejecucion</th>
+          </tr>
+          <tr>
+            <td><code>&lt;address&gt;</code></td>
+            <td>Utilizado para definir información de contacto, como dirección, teléfono y correo electrónico. El texto
+              se muestra en cursiva.</td>
+            <td>
+              <code>&lt;address&gt; Jhon Smith <br> &lt;a href="mailto:jhons54684@example.com"&gt; jhons54684@example.com &lt;/a&gt; <br> 107 Springtime Boulevard <br> Mountain View, CA <br> +256 4481-546585 &lt;/address&gt;</code>
+            </td>
+            <td>
+              <address> Jhon Smith <br> <a href="mailto:jhons54684@example.com"> jhons54684@example.com </a> <br> 107
+                Springtime Boulevard <br> Mountain View, CA <br> +256 4481-546585 </address>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;</code></td>
+            <td>Representa una sección autónoma de contenido en una página, como un artículo o una publicación de blog.
+              Debe incluir su propio encabezado.</td>
+            <td>&lt;article class="day-forecast"&gt;
+              &lt;h2&gt;04 March 2018&lt;/h2&gt;
+              &lt;p&gt;Periods of rain.&lt;/p&gt;
+              &lt;/article&gt;</td>
+            <td>
+              <article class="day-forecast">
+                <h2>04 March 2018</h2>
+                <p>Periods of rain.</p>
+              </article>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;</code></td>
+            <td>Define contenido relacionado o complementario que se encuentra fuera del flujo principal del contenido
+              de la página. Puede contener anuncios, notas o enlaces relacionados.</td>
+            <td>&lt;aside&gt;
+              &lt;h4&gt;Epcot Center&lt;/h4&gt;
+              &lt;p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+              pavilions, award-winning fireworks and seasonal special events.&lt;/p&gt;
+              &lt;/aside&gt;
+            <td>
+              <aside>
+                <h4>Epcot Center</h4>
+                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+                  pavilions, award-winning fireworks and seasonal special events.</p>
+              </aside>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;blockquote&gt;</code></td>
+            <td>Se utiliza para citar una sección de texto de otra fuente. Puede incluir la fuente de la cita utilizando
+              el atributo <code>cite</code>.</td>
+            <td>&lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+              For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,
+              WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5
+              million globally.
+              &lt;/blockquote&gt;</td>
+            <td>
+              <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+                organization, WWF works in 100 countries and is supported by 1.2 million members in the United States
+                and close to 5 million globally.
+              </blockquote>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;details&gt;</code></td>
+            <td>Crea un elemento plegable que puede mostrarse u ocultarse para revelar contenido adicional. Utiliza el
+              elemento <code>&lt;summary&gt;</code> para proporcionar un título.</td>
+            <td>&lt;details&gt;
+              &lt;summary&gt;Epcot Center&lt;/summary&gt;
+              &lt;p&gt;Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+              pavilions, award-winning fireworks and seasonal special events.&lt;/p&gt;
+              &lt;/details&gt;</td>
+            <td>
+              <details>
+                <summary>Epcot Center</summary>
+                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+                  pavilions, award-winning fireworks and seasonal special events.</p>
+              </details>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;dialog&gt;</code></td>
+            <td>Define una ventana de diálogo o una caja de mensaje interactiva que puede abrirse o cerrarse. Puedes
+              agregar contenido dentro del diálogo.</td>
+            <td>&lt;dialog open&gt;This is an open dialog window&lt;/dialog&gt;</td>
+            <td>
+              <dialog open>This is an open dialog window</dialog>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;div&gt;</code></td>
+            <td>Un contenedor genérico que no tiene significado semántico propio. Se utiliza para agrupar y estructurar
+              contenido de manera flexible.</td>
+            <td>&lt;div&gt; <br>
+              &lt;p&gt;Esto es un div genérico para contener contenido.&lt;/p&gt;<br>
+              &lt;/div&gt;<br></td>
+            <td>
+              <div><br>
+                <p>Esto es un div genérico para contener contenido.</p><br>
+              </div><br>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;dl&gt;</code></td>
+            <td>Crea una lista de definición que consta de pares de términos (<code>&lt;dt&gt;</code>) y sus
+              definiciones (<code>&lt;dd&gt;</code>).</td>
+            <td> &lt;dl&gt;<br>
+              &lt;dt&gt;Término 1 &lt;/dt&gt; <br>
+              &lt;dd&gt;Definición 1 &lt;/dd&gt;<br>
+              &lt;dt&gt;Término 2 &lt;/dt&gt;<br>
+              &lt;dd&gt;Definición 2 &lt;/dd&gt;<br>
+              &lt;/dl&gt;<br></td>
+            <td>
+              <dl>
+                <dt>Término 1</dt>
+                <dd>Definición 1</dd>
+                <dt>Término 2</dt>
+                <dd>Definición 2</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;dt&gt;</code></td>
+            <td>Representa un término en una lista de definición (<code>&lt;dl&gt;</code>) que precede a su definición
+              (<code>&lt;dd&gt;</code>).</td>
+            <td>&lt;dt&gt;Término 1 &lt;/dt&gt; <br></td>
+            <td>
+              <dt>Término 1</dt>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;dd&gt;</code></td>
+            <td>Representa la definición de un término en una lista de definición (<code>&lt;dl&gt;</code>) que sigue a
+              su término (<code>&lt;dt&gt;</code>).</td>
+            <td>&lt;dd&gt;Definición 1 &lt;/dd&gt;<br></td>
+            <td>
+              <dd>Definición 1</dd>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;figure&gt;</code></td>
+            <td>Utilizado para envolver contenido relacionado, como imágenes, gráficos, diagramas o tablas, junto con
+              una descripción (<code>&lt;figcaption&gt;</code>).</td>
+            <td>&lt;figure&gt;<br>
+              &lt;img&gt; src="C:\Users\Usuario\Desktop\ElementosBloque\Img\paisaje.jpg" alt="Ejemplo de una
+              imagen"><br>
+              &lt;/figure&gt;<br></td>
+            <td>
+              <figure> <br>
+                <img src="C:\Users\Usuario\Desktop\ElementosBloque\Img\paisaje.jpg" alt="Ejemplo de una imagen">
+              </figure>
+            </td>
+
+          </tr>
+          <tr>
+            <td><code>&lt;figcaption&gt;</code></td>
+            <td>Proporciona una descripción o leyenda para el contenido encapsulado en un elemento
+              <code>&lt;figure&gt;</code>.
+            </td>
+            <td>&lt;figcaption&gt;Esta es una imagen de ejemplo con una descripción.&lt;/figcaption&gt;<br></td>
+            <td>
+              <figcaption>Esta es una imagen de ejemplo con una descripción.</figcaption>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Define el pie de página de un documento o una sección de la página. Suele incluir información de
+              autoría, derechos de autor, enlaces de contacto, etc.</td>
+            <td>&lt;footer&gt;
+              &lt;p&gt;Autor: Hege Refsnes&lt;br&gt;
+              &lt;a href="mailto:hege@example.com">hege@example.com&lt;a&gt;&lt;/p&gt;
+              &lt;footer&gt;</td>
+            <td>
+              <footer>
+                <p>Autor: Hege Refsnes<br>
+                  <a href="mailto:hege@example.com">hege@example.com</a>
+                </p>
+              </footer>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>Define la cabecera de un documento o una sección de la página. Usualmente contiene elementos de
+              encabezado, logotipos y menús de navegación.</td>
+            <td>&lt;header&gt;
+              &lt;h1>el fubtol&lt;/h1&gt;
+              &lt;p>gano el madrid&lt;/p&gt;
+              &lt;/header&gt;</td>
+            <td>
+              <header>
+                <h1>el fubtol</h1>
+                <p>gano el madrid</p>
+              </header>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;hr&gt;</code></td>
+            <td>Crea una línea horizontal para separar secciones de contenido en una página. No requiere etiqueta de
+              cierre.</td>
+            <td>&lt;&gt;
+
+              &lt;p&gt;fue toda una sensacion la monalisa.&lt;/p&gt;
+
+              &lt;hr&gt;</td>
+            <td>
+              <hr>
+
+              <p>fue toda una sensacion la monalisa.</p>
+
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;li&gt;</code></td>
+            <td>Elemento de lista utilizado dentro de <code>&lt;ul&gt;</code> o <code>&lt;ol&gt;</code> para representar
+              elementos de una lista, como elementos de menú o elementos de lista de tareas.</td>
+            <td>&lt;li&gt;cereal&lt;/li&gt;
+              &lt;li&gt;leche&lt;/li&gt;
+              &lt;li&gt;pan&lt;/li&gt;</td>
+            <td>
+              <li>cereal</li>
+              <li>leche</li>
+              <li>pan</li>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;main&gt;</code></td>
+            <td>Define el contenido principal de un documento o de la página web. Debe ser único en la página y abarcar
+              la mayor parte del contenido visible.</td>
+            <td>&lt;main&gt;
+              &lt;h1&gt;Los navegadores más populares&lt;/h1&gt;
+              &lt;p&gt;Edge es el navegadores más utilizados hoy en día.&lt;/p&gt;
+
+              &lt;article&gt;
+              &lt;h2&gt;Microsoft Edge&lt;/h2&gt;
+              &lt;p&gt;Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge
+              reemplazó a Internet Explorer.&lt;/p&gt;
+              &lt;article&gt;
+              &lt;/main&gt;</td>
+            <td>
+              <main>
+                <h1>Los navegadores más populares</h1>
+                <p>Edge es el navegadores más utilizados hoy en día.</p>
+
+                <article>
+                  <h2>Microsoft Edge</h2>
+                  <p>Microsoft Edge es un navegador web desarrollado por Microsoft, lanzado en 2015. Microsoft Edge
+                    reemplazó a Internet Explorer.</p>
+                </article>
+              </main>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;nav&gt;</code></td>
+            <td>Define una sección de navegación en una página web. Usualmente contiene enlaces a otras partes de la
+              página o a otras páginas.</td>
+            <td>&lt;nav&gt;
+              &lt;a href="/html/"&gt;Java&lt;/a&gt; |
+              &lt;a href="/python/"&gt;Python&lt;/a&gt;
+              &lt;/nav&gt;
+            </td>
+            <td>
+              <nav>
+                <a href="/html/">Java</a> |
+                <a href="/python/">Python</a>
+              </nav>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>Crea un párrafo de texto en la página web. Se utiliza para estructurar y separar el texto en párrafos.
+            </td>
+            <td>&lt;p&gt;Tengo hambre.&lt;/p&gt;</td>
+            <td>
+              <p>Tengo hambre.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;pre&gt;</code></td>
+            <td>Muestra el texto preformateado, lo que significa que mantiene espacios en blanco, tabulaciones y saltos
+              de línea tal como están escritos.</td>
+            <td>&lt;pre&gt;
+              El texto en un elemento pre
+              se muestra en una fuente de ancho fijo
+              y conserva tanto los espacios como
+              saltos de línea
+              &lt;/pre&gt;</td>
+            <td>
+              <pre>
+                        El texto en un elemento pre
+                        se muestra en una fuente de ancho fijo
+                        y conserva tanto los espacios como
+                        saltos de línea
+                        </pre>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>Define una sección lógica o temática de un documento o de una página web. Puede contener contenido
+              relacionado o agrupado por tema.</td>
+            <td>&lt;section&gt;
+              &lt;h2&gt;Historia del WWF&lt;/h2&gt;
+              &lt;p&gt;El Fondo Mundial para la Naturaleza (WWF) es una organización internacional que trabaja en temas
+              relacionados con la conservación, investigación y restauración del medio ambiente, anteriormente conocida
+              como el Fondo Mundial para la Vida Silvestre. El WWF fue fundado en 1961.&lt;/p&gt;
+              &lt;/section&gt;</td>
+            <td>
+              <section>
+                <h2>Historia del WWF</h2>
+                <p>El Fondo Mundial para la Naturaleza (WWF) es una organización internacional que trabaja en temas
+                  relacionados con la conservación, investigación y restauración del medio ambiente, anteriormente
+                  conocida como el Fondo Mundial para la Vida Silvestre. El WWF fue fundado en 1961.</p>
+              </section>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;form&gt;</code></td>
+            <td>Define un formulario que se utiliza para recopilar datos del usuario. Puede contener campos de entrada,
+              botones y otros elementos relacionados con el formulario.</td>
+            <td>&lt;form action="/action_page.php" method="get">
+              &lt;label for="fname"&gt;Nombre:&lt;/label&gt;
+              &lt;input type="text" id="fname" name="fname"&gt;<br><br>
+              &lt;label for="lname"&gt;Apellido:&lt;/label&gt;
+              &lt;input type="text" id="lname" name="lname"&gt;<br><br>
+              &lt;input type="submit" value="Enviar"&gt;
+              &lt;/form&gt;</td>
+            <td>
+              <form action="/action_page.php" method="get">
+                <label for="fname">Nombre:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Apellido:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="Enviar">
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;fieldset&gt;</code></td>
+            <td>Agrupa elementos de formulario relacionados y opcionalmente incluye una leyenda. Se utiliza para mejorar
+              la accesibilidad y la estructura de los formularios.</td>
+            <td>&lt;fieldset>
+              &lt;legend&gt;Información personal:&lt;/legend&gt;
+              &lt;label for="fname"lt;Nombre:&gt;/label&gt;
+              &lt;input type="text" id="fname" name="fname"&gt;<br>
+              &lt;label for="lname"&gt;Apellido:&lt;/label&gt;
+              &lt;input type="text" id="lname" name="lname"&gt;<br>
+              &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+              &lt;input type="email" id="email" name="email"&gt;<br>
+              &lt;label for="birthday"&gt;Fecha de nacimiento:&lt;/label&gt;
+              &lt;input type="date" id="birthday" name="birthday"&gt;<br>
+              &lt;input type="submit" value="Enviar"&gt;
+              &lt;/fieldset&gt;</td>
+            <td>
+              <fieldset>
+                <legend>Información personal:</legend>
+                <label for="fname">Nombre:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Apellido:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="birthday">Fecha de nacimiento:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+                <input type="submit" value="Enviar">
+              </fieldset>
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>Define una tabla que contiene filas (<code>&lt;tr&gt;</code>), celdas de encabezado
+              (<code>&lt;th&gt;</code>) y celdas de datos (<code>&lt;td&gt;</code>).</td>
+            <td>&lt;table&gt;
+              &lt;tr&gt;
+              &lt;th&gt;Mes&lt;/th&gt;
+              &lt;th&gt;Presuspuesto&lt;/th&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+              &lt;td&gt;Enero&lt;/td&gt;
+              &lt;td&gt;$100&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+              &lt;td&gt;Febrero&lt;/td&gt;
+              &lt;td&gt;$80&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;/table&gt;</td>
+            <td>
+              <table>
+                <tr>
+                  <th>Mes</th>
+                  <th>Presuspuesto</th>
+                </tr>
+                <tr>
+                  <td>Enero</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>Febrero</td>
+                  <td>$80</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </dir>
+
+      <h2>Elementos de Lineas</h2>
+      <p>Un elemento de línea es un elemento que no comienza con una nueva línea cuando se representa en el navegador.
+        Estos elementos solo ocupan el espacio necesario para el contenido que contienen, en lugar de ocupar toda la
+        línea. No puedes establecer dimensiones (ancho y alto) en los elementos de línea.
+        Algunos ejemplos de elementos de línea son &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;label&gt;, &lt;input&gt;,
+        &lt;select&gt;, &lt;strong&gt;, &lt;em&gt;, entre otros.</p>
+      <dir>
+        <table border="1">
+          <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+            <th>Sintaxis</th>
+            <th>Ejemplos</th>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;a&gt;</h2>
+            </td>
+            <td>Define un enlace hiperactivo.</td>
+            <td><code>&lt;a href="URL"&gt;Texto del enlace&lt;/a&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> <a href="https://www.ejemplo.com">Este es un enlace (a) a un sitio
+                web</a><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;abbr&gt;</h2>
+            </td>
+            <td>Define una abreviatura o acrónimo.</td>
+            <td><code>&lt;abbr title="Texto completo"&gt;Abreviatura&lt;/abbr&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> <abbr title="Hypertext Markup Language">HTML</abbr> es un lenguaje de
+              marcado utilizado para crear páginas web.<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;b&gt;</h2>
+            </td>
+            <td>Define texto en negrita.</td>
+            <td><code>&lt;b&gt;Texto en negrita&lt;/b&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está en negrita: <b>Negrita (b)</b><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;br&gt;</h2>
+            </td>
+            <td>Define un salto de línea en el texto.</td>
+            <td><code>Texto antes del salto &lt;br&gt; Texto después del salto</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un <br>salto de línea (br) en el texto.<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;cite&gt;</h2>
+            </td>
+            <td>Define el título de un libro, película o recurso.</td>
+            <td><code>&lt;cite&gt;Título del recurso&lt;/cite&gt;</code></td>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;code&gt;</h2>
+            </td>
+            <td>Define un fragmento de código.</td>
+            <td><code>&lt;code&gt;Código&lt;/code&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un <code>HTML</code> dentro de un párrafo.<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;del&gt;</h2>
+            </td>
+            <td>Define texto que ha sido eliminado del documento.</td>
+            <td><code>&lt;del&gt;Texto eliminado&lt;/del&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto ha sido eliminado: <del>Texto eliminado (del)</del><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;dfn&gt;</h2>
+            </td>
+            <td>Define un término que será definido dentro del contenido.</td>
+            <td><code>&lt;dfn&gt;Término a definir&lt;/dfn&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> <dfn>Definición de un término</dfn> se puede agregar utilizando el elemento
+              definición (dfn).<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;em&gt;</h2>
+            </td>
+            <td>Define texto enfatizado, generalmente en cursiva.</td>
+            <td><code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está enfatizado: <em>Enfatizado (em)</em><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;i&gt;</h2>
+            </td>
+            <td>Define texto en cursiva, pero no implica una alteración de significado.</td>
+            <td><code>&lt;i&gt;Texto en cursiva&lt;/i&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está en cursiva: <i>Cursiva (i)</i><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;iframe&gt;</h2>
+            </td>
+            <td>Define un marco en línea que puede contener otro documento HTML.</td>
+            <td><code>&lt;iframe src="URL_del_documento"&gt;&lt;/iframe&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/evCuApztgLk?si=9Uxld4-cCuuQvOk3" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;ins&gt;</h2>
+            </td>
+            <td>Define texto que ha sido insertado en el documento.</td>
+            <td><code>&lt;ins&gt;Texto insertado&lt;/ins&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto ha sido insertado: <ins>Texto insertado (ins)</ins><br>
+
+          <tr>
+            <td>
+              <h2>&lt;kbd&gt;</h2>
+            </td>
+            <td>Define entrada del teclado, generalmente para comandos de usuario.</td>
+            <td><code>&lt;kbd&gt;Tecla(s) de entrada&lt;/kbd&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;mark&gt;</h2>
+            </td>
+            <td>Define texto que debe ser resaltado o marcado.</td>
+            <td><code>&lt;mark&gt;Texto resaltado&lt;/mark&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está resaltado: <mark>Texto resaltado (mark)</mark><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;q&gt;</h2>
+            </td>
+            <td>Define un fragmento de texto que se cita de otra fuente.</td>
+            <td><code>&lt;q&gt;Texto citado&lt;/q&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un pequeño texto: <q>Texto citado (q)</q><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;s&gt;</h2>
+            </td>
+            <td>Define texto que ha sido tachado o eliminado del documento.</td>
+            <td><code>&lt;s&gt;Texto tachado&lt;/s&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está tachado: <s>Texto tachado (s)</s><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;samp&gt;</h2>
+            </td>
+            <td>Define un fragmento de código que representa una salida de muestra en un programa.</td>
+            <td><code>&lt;samp&gt;Código de muestra&lt;/samp&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Ejemplo de código de programación: <samp>print("Hola, mundo!")</samp><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;small&gt;</h2>
+            </td>
+            <td>Define texto más pequeño que el texto circundante.</td>
+            <td><code>&lt;small&gt;Texto pequeño&lt;/small&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un texto pequeño: <small>Texto pequeño (small)</small><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;span&gt;</h2>
+            </td>
+            <td>Define una sección en un documento.</td>
+            <td><code>&lt;span&gt;Contenido del span&lt;/span&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está dentro de un contenedor genérico: <span>Contenedor genérico
+                (span)</span><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;strong&gt;</h2>
+            </td>
+            <td>Define texto que debe ser visualmente más fuerte o importante que el texto circundante.</td>
+            <td><code>&lt;strong&gt;Texto fuerte&lt;/strong&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este texto está fuertemente enfatizado: <strong>Fuertemente enfatizado
+                (strong)</strong><br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;sub&gt;</h2>
+            </td>
+            <td>Define texto que debe ser mostrado como subíndice.</td>
+            <td><code>&lt;sub&gt;Texto subíndice&lt;/sub&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un texto subíndice: H<sub>2</sub>O utilizando (sub)<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;sup&gt;</h2>
+            </td>
+            <td>Define texto que debe ser mostrado como superíndice.</td>
+            <td><code>&lt;sup&gt;Texto superíndice&lt;/sup&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un texto superíndice: 10<sup>2</sup> utilizando (sup)<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;time&gt;</h2>
+            </td>
+            <td>Define una fecha o hora, o ambos, en un documento.</td>
+            <td><code>&lt;time datetime="valor de fecha y hora"&gt;Texto de fecha y hora&lt;/time&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> La fecha y hora actual es: <time datetime="2023-10-25T12:00">25 de octubre
+                de 2023, 12:00 PM</time>.<br>
+          </tr>
+
+          <tr>
+            <td>
+              <h2>&lt;var&gt;</h2>
+            </td>
+            <td>Define una variable en un contexto de programación o matemáticas.</td>
+            <td><code>&lt;var&gt;Variable&lt;/var&gt;</code></td>
+            <td><strong>Ejemplo 1:</strong> Este es un término variable: <var>x</var><br>
+          </tr>
+        </table>
+      </dir>
+
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oP_fECpf7VU" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+    <!-- Aqui los Atributos -->
+    <section id="atributos_html">
+      <h2>Atributos HTML</h2>
+      <p>Los atributos en HTML son valores adicionales que configuran los elementos o ajustan su comportamiento.
+        Cada elemento de HTML tiene sus propios atributos, que se utilizan para definir su apariencia, comportamiento
+        y funcionalidad.Aquí hay una lista de algunos de los atributos más comunes en HTML:</p>
+      <dir>
+        <table border="1">
+          <tr>
+            <th>ATRIBUTOS HTML</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+          </tr>
+          <tr>
+            <td><code>&lt;class&gt;</code></td>
+            <td>Este atributo especifica una o más clases para un elemento HTML. Las clases se utilizan para seleccionar
+              elementos con selectores CSS específicos.</td>
+            <td>&lt;div class="miClase"&gt;&lt;/div&gt;</td>
+
+          </tr>
+          <tr>
+            <td><code>&lt;id&gt;</code></td>
+            <td>Este atributo especifica un identificador único para un elemento HTML. El valor del atributo id debe ser
+              único dentro del documento HTML.</td>
+            <td>&lt;div id="miID"&gt;&lt;/div&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;style&gt;</code></td>
+            <td>Este atributo se utiliza para aplicar estilos CSS en línea a un elemento HTML.</td>
+            <td>&lt;p style="color:red"&gt;Este es un párrafo rojo.&lt;/p&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;lang&gt;</code></td>
+            <td>Este atributo declara el idioma de la página web o solo una parte de la página web. Se utiliza para
+              ayudar a los motores de búsqueda y navegadores.</td>
+            <td>&lt;html lang="es"&gt;&lt;/html&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;src&gt;</code></td>
+            <td>Este atributo especifica la URL de un recurso externo. Se utiliza comúnmente en las etiquetas
+              &lt;img&gt;, &lt;script&gt; y &lt;iframe&gt;.</td>
+            <td>&lt;img src="miImagen.jpg"&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;href&gt;</code></td>
+            <td>Este atributo especifica la URL de la página a la que enlaza un enlace. Se utiliza en la etiqueta
+              &lt;a&gt;.</td>
+            <td>&lt;a href="https://www.ejemplo.com"&gt;Visita nuestra página web&lt;/a&gt;</td>
+          </tr>
+        </table><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gWDh3QenbXY" frameborder="0"
+          allowfullscreen></iframe>
+  </div>
+  </section>
+  </div>
+
+  <section id="practica_html">
+    <h2>Practica tus conomimientos</h2>
+    <p>Da clic <a href="https://www.cubicfactory.com/jseditor/">aquí</a> para ir a las página web de Practicas.</p>
+  </section>
+
+  <footer>
+    <p>APRENDIENDO HTML y CSS </p><br>
+    <p>Integrantes: Pedro Lorenzo, Eduardo Franco, Nery Benitez.</p>
+    <a href="contacto.html"><button class="botonfooter">CONTACTO</button></a>
+  </footer>
+
+</body>
+
+</html>

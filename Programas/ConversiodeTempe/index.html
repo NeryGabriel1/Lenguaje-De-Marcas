@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<script>
+   var temperaturas=["Celsius","Fahrenheit","Kelvin"];
+
+   FC=function(F){  return (5*(F-32)/9).toFixed(2);  }
+   FK=function(F){  return ((5*(F-32)/9)+273.15).toFixed(2); }
+   CF=function(C){  return ((9*C/5)+32).toFixed(2);   }
+   CK=function(C){  return (C+273.15).toFixed(2);   }
+   KC=function(K){  return (K-273.15).toFixed(2);   }
+   KF=function(K){  return ((9*(K-273.15)/5)+32).toFixed(2);   }
+
+    function cambio(){
+      let valor = document.querySelector("input[name=temperaturas]:checked")?.value;
+      let numero=parseFloat(document.getElementById("temperatura").value);
+      //const ori = temperaturas.find((element) => element[0].toUpperCase()==valor[0].toUpperCase());
+      //const des = temperaturas.find((element) => element[0].toUpperCase()==valor[1].toUpperCase());
+      temperaturas.forEach( (a)=>{
+         if (a[0].toUpperCase()==valor[0].toUpperCase()) ori=a;
+         if (a[0].toUpperCase()==valor[1].toUpperCase()) des=a;
+      });
+      document.getElementById("origen").innerHTML=ori;
+      document.getElementById("destino").innerHTML=window[valor](numero)+" "+des;
+   }
+   function anadir(nombre,valor){
+      let v=document.querySelector("fieldset");
+
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.value = valor;
+      input.name = 'temperaturas';
+      input.addEventListener("change",()=>{cambio();});
+
+      const label = document.createElement('label');
+      label.for = nombre;
+      label.textContent = nombre; 
+      v.appendChild(input);
+      v.appendChild(label);
+      v.appendChild(document.createElement('br'));
+   }
+   function inicio(){
+      temperaturas.forEach((a)=>{
+         temperaturas.forEach((b)=>{
+            if (a!=b){
+               let nombre=" "+a+" a "+b;
+               let valor=a[0].toUpperCase()+b[0].toUpperCase();
+               anadir(nombre,valor);
+            }
+         });
+      });
+      document.getElementById("temperatura").addEventListener("change",()=>{cambio();})
+      document.getElementsByName("temperaturas")[0].checked=true; 
+      cambio();
+   }
+window.addEventListener("load",()=>{ inicio();  })
+ </script>
+ <style>
+    fieldset{
+        width: 250px;
+        margin:20px auto;
+        border:5px black ridge;
+        border-radius: 25px;
+        padding-left: 30px;
+        background-color: rgba(37, 149, 190, 0.614);
+
+    }
+    legend{padding:10px;background-color: black;color:white;border-radius: 25px;}
+    input[type="radio"]{  margin:10px 0px;    }
+
+    input[name=temperaturas]:checked +label{
+      background-color: rgb(109, 221, 208);color:white;
+      padding:3px;
+    }
+    input[type="number"]{ text-align: right;   }
+    #marco{
+      width: 350px;
+      margin:20px auto;
+      border:1px solid black;
+      padding:20px;
+      border:10px black ridge;
+      border-radius: 25px;
+    }
+ </style>
+<html>
+<body>
+  
+   <div id="marco">
+      <p style="text-align:center">
+         <label for="Origen" id="origen"></label> 
+         <input type="number" id="temperatura"  value="0">
+      </p>
+      <p style="text-align:center">
+         <label for="Destino" id="destino">
+         </label></p>
+     <fieldset>
+        <legend>Conversión de Temperaturas</legend>
+   
+        
+     
+   </fieldset>
+</div>
+   
+</body>
+</html>

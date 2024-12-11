@@ -1,0 +1,344 @@
+@font-face{
+    font-family: 'Coco-Gothic';
+    src: url('../font/CocoGothic-Bold_trial.ttf');
+    font-style: bold;
+  }
+  @font-face {
+    font-family: 'Coco-Gothic-Fat';
+    src: url(../font/CocoGothic-Fat_trial.ttf);
+  }
+  @font-face {
+    font-family: 'Coco-Gothic-Light';
+    src: url(../font/CocoGothic-Light_trial.ttf);
+  }
+  
+  a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Coco-Gothic';
+  }
+  body {
+    font-family: 'Coco-Gothic';
+    font-weight: bold;
+    background-color: #fff;
+    margin: 0;
+  }
+  p{
+    font-family: 'Coco-Gothic-Light';
+  }
+  
+  h1{
+    
+    font-family: 'Coco-Gothic-Fat';
+  }
+  
+  .mac-bar {
+      background-color: #A6A6A6; /* Gris */
+      display: flex;
+      position: fixed;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      top: 0;
+      left: 0;
+      padding: 5px 10px;
+      z-index: 1000;  
+  }
+  
+  .mac-button {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease; /* Esta es la transición suave */
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+  }
+  
+  .mac-button span {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 10px; /* Este es el tamaño de la letra*/
+      opacity: 0;
+      transition: opacity 0.3s ease, width 0.3s ease; /* Transición suave de opacidad y ancho */
+  }
+  
+  .mac-button:hover {
+      width: 40px; /* Ajusta el ancho al pasar el ratón */
+      border-radius: 5px; /* Cambia a un botón rectangular */
+  }
+  
+  .mac-button:hover span {
+      opacity: 1;
+  }
+  
+  .html {
+      background-color: #FF8E51; /* COLOR HTML */
+  }
+  
+  .css {
+      background-color: #5271FF; /* COLOR CSS */
+  }
+  
+  .test {
+      background-color: #FFDE59; /* COLOR TEST */
+  }
+  
+  .title {
+    font-family: 'Coco-Gothic';
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .gris{
+    background-color: #D9D9D9;
+    right: 20%;
+    height: 18px;
+    width: 48px; /* Ajusta el ancho al pasar el ratón */
+    border-radius: 5px; /* Cambia a un botón rectangular */
+    margin-right: 8px;
+    opacity: 1;
+  }
+  .gris:hover{
+    width: 48px;
+    height: 18px;
+  }
+  .gris:active{
+    transform: scale(105%);
+  }
+  .gris span{
+    opacity: 1;
+  }
+  .gris a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .content {
+      padding: 20px;
+  }
+  
+  /*
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+  
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    } */
+    
+    #Inicio{
+      height: 800px;
+      width: 100%;
+      margin-bottom: 200px;
+    }
+  
+    .cajaprincipal{ /*EL INICIO ESTÁ DIVIDIDO EN DOS PARTES, IZQUIERDA (landig left_side y landing right_side)*/
+      position: relative;
+      float: left;
+      height: 100%;
+      background-color: saddlebrown;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+  
+    }
+    .landing_left{
+      flex: 1;
+      background-color: #5271FF;
+      height: 100%;
+      z-index: 2;
+    }
+    .cajaencabezado{
+      position: relative;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin: 0;
+      width: 100%;
+      height: 500px;
+      background-color: #5271FF;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  
+    }
+    .encabezado {
+      margin: auto;
+      color: #ff8e51;
+      font-size:42px;
+      -webkit-text-stroke-width: 0.8px;
+      -webkit-text-stroke-color: black;
+      z-index: 20;
+    }
+    .landing_text{
+      text-align: center;
+    }
+    .up{  /*Texto de arriba(AULA INFORMATICA)*/
+      border: 2px solid black;
+      padding: 30px;
+      height: 50px;
+      width: 450px;
+      margin: auto;
+      background-color: #ffd83f;
+      border-radius: 70px;
+      color: #ff8e51;
+      font-size:42px;
+      position: relative;
+      transform:rotate(-5deg);
+      z-index: 10;
+    }
+    .up h1{
+      position: relative;
+      top: 5px;
+      font-size: 38px;
+    }
+    .mid{ /*Texto del centro*/
+      border: 2px solid black;
+      padding: 30px;
+      height: 50px;
+      width: 300px;
+      margin: auto;
+      background-color: #FFFBE0;
+      border-radius: 70px;
+      color: #ff8e51;
+      font-size:42px;
+      position: relative; 
+      transform:rotate(2deg);
+      z-index: 10;  
+    }
+    .mid h1{
+      position: relative;
+      top: -10px;
+      font-size: 36px;
+    }
+    .down{ /*TEXTO DE ABAJO*/
+      height: 90px;
+      width: 300px;
+      margin: auto;
+      color: #000;
+      font-size:26px;
+      position: relative; 
+      z-index: 10;
+      top: -25px;
+    }
+    .down h1{
+      position: relative;
+      top: -25px;
+      font-family: 'Coco-Gothic';
+  
+    }
+  
+    /*AQUÍ COMIENZA EL RIGHT_SIDE*/
+    .landing_right{
+      background-color: #5271FF;
+      position: relative;
+      height: 100%; 
+      flex: 1;
+    }
+    
+    .cajadirecciones{
+      z-index: 3;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background-color: #5271FF;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .enlace{
+      color: black;
+      text-decoration: none;
+      
+    }
+    .item{ /*Estas son las casillas de la derecha*/
+      width: 260px;
+      height: 120px;
+      background-color: #FFFBE0;
+      border: 2px solid black;
+      transition: 0.3s;
+    }
+    .item:hover{
+      transform: scale(102%);
+    }
+    
+      
+    
+    .item h2 {
+      position: relative;
+      text-align: center;
+      top: -40%;
+      left: 10px;
+      transform: translateY(-50%);
+      font-size: 38px;
+  
+  
+    }
+  
+    .landing_img{
+      position: relative;
+      top: 50%;
+      transform: translate(-65%,-50%);
+      z-index: 100;
+      width: 71px;
+      height: 77px;
+      border: 1px solid #000;
+      border-radius: 2px;
+    }
+    .landing_img img{
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .generalbox{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 85%;
+      margin: 100px;
+      
+    }
+    footer {
+        float: left;
+        position: relative;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .margen {
+        margin-left: 10px;
+        text-align: center;
+    }
+    .horizontal-radio {
+        display: flex;
+        margin-left: 170px;
+        align-items: center;
+        text-align: center;
+        gap:10px;}
+    iframe{
+      position: relative;
+      left: 50%;
+      transform: translate(-50%,2%);
+      border: 2px solid black;
+      border-radius: 10px;
+    }

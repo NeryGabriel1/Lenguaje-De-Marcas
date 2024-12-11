@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "mi fuente";
+    src: url(../fuentes/sigmar_one.woff);
+}
+
+body {
+    background-color:#e9f2fb; 
+    font-family: sans-serif;
+    text-align: justify;
+    width:49%;
+    max-width:1080px;
+    margin:auto;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "mi fuente";
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+    color:#7a99b8;
+    font-family: "mi fuente";
+    font-size: 3rem;
+    text-shadow: 3px 3px black;
+  }
+
+  hr {
+    clear: both;
+    width: 66%;
+    height: 10px;
+    border: black 1px solid;
+    border-radius: 5px;
+    margin: 40px auto;
+    background-color: hsl(210, 30%, 60%);
+  }
+
+ p.izquierda {
+    float: left;
+    width: 33%;
+  }
+  
+p.ratoneroIzq{
+    float: left;
+    width: 33%;
+    margin-right: 50px;
+}
+
+p.ratoneroDer{
+    float: right;
+    width: 35%;
+
+}
+
+img {
+    border: #7a99b8 5px solid;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+img.izq {
+    float: left;
+    margin-right: 10px;
+  }
+  
+img.der{
+    float: right;
+  }
+
+u{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+b{
+    color: red;
+    background-color: white;
+}
+
+span{
+    color: blue;
+}
+

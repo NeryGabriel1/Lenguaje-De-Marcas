@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>window.addEventListener("load", () => { inicio(); });
+        const valoresIniciales = { 'cambioDE': 1.09, 'cambioDY': 180.08, 'cambioDL': 1 };
+        const inputElements = document.querySelectorAll('.input_inicial')
+        
+        function inicio() {
+            cargarValoresIniciales();
+        }
+        
+        function cargarValoresIniciales() {
+            cargarContenedor1();
+            /***************/
+            let euro = document.getElementById("cambioDE");
+            let contenedor = 1;
+            euro.addEventListener("input", () => { cambio(euro); });
+            // ahora yen
+            let yen = document.getElementById("cambioDY");
+            yen.addEventListener("input", () => { cambio(yen); });
+            // ahora libra
+            let libra = document.getElementById("cambioDL");
+            libra.addEventListener("input", () => { cambio(libra); });
+        
+        }
+        /********************************************/
+        function cambio(origen) {
+            // voy a hacer la inversa para dolar y luego cambiar las otras monedas
+            let valor_origen = origen.value;
+            let id = origen.id;
+            let inicialDeMoneda = id.substring(id.length - 1);
+            valoresIniciales[id] = valor_origen;
+        
+            let dolar = document.getElementById("cambio" + inicialDeMoneda + "D"); // Cambiamos el valor de Dolar
+            if (parseFloat(valor_origen) > 0) { 
+               dolar.value= parseFloat((1 / valor_origen))
+             } else {
+                dolar.value=0}
+            
+            actualizarMonedas(dolar.value, inicialDeMoneda);
+        }
+        /********************************************/
+        var vCambio = ["E", "Y", "L"];
+        function actualizarMonedas(valorNuevo, inicialDeMoneda) {
+            let id_des;
+            for (let i = 0; i < vCambio.length; i++) {
+                let moneda = vCambio[i];
+                id_des = "cambio";
+                if (moneda != inicialDeMoneda) {
+                    id_des += inicialDeMoneda + moneda;
+                    let cambio = document.getElementById(id_des);
+                    let monedaActual = "cambioD" + moneda;
+                    cambio.value = parseFloat((valoresIniciales[monedaActual] * valorNuevo));
+                }
+            }
+        }
+        
+        function cargarContenedor1() {
+            for (let i = 0; i < inputElements.length; i++) {
+                let inputOrigen = inputElements[i];
+                inputOrigen.value = valoresIniciales[inputOrigen.id]; // || ''
+                cambio(inputOrigen);
+            }
+        }
+      </script>
+    <div id="contenedo1">
+        <table>
+            <tr>
+                <td width: "80"></td>
+                <td widht: "70" ; align="center"><img src="img/usa.gif" style="width: 40px;"><br>Dólar</td>
+                <td widht: "70" ; align="center"><img src="img/cee.gif" style="width: 40px;"><br> Euro</td>
+                <td widht: "70" ; align="center"><img src="img/japon.gif" style="width: 40px;"><br> Yen</td>
+                <td widht: "70" ; align="center"><img src="img/ingla.gif" style="width: 40px;"> <br>Libra</td>
+            </tr>
+            <tr>
+                <td class="moneda"> <img src="./img/usa.gif" alt="EEUU" width="30px"> <br>Dólar</td>
+                <td><input type="text" class="rojo" disabled></td>
+                <td aling: "right"><input type="text" id="cambioDE" class="input_inicial"></td>
+                <td aling: "right"><input type="text" id="cambioDY" class="input_inicial"></td>
+                <td aling: "right"><input type="text" id="cambioDL" class="input_inicial" ></td>
+            </tr>
+            <tr>
+                <td class="moneda"> <img src="./img/cee.gif" alt="España" width="30px"> <br>Euro</td>
+                <td aling: "right"><input type="text" id="cambioED" disabled  class="azul"></td>
+                <td><input type="text" class="rojo" disabled></td>
+                <td aling: "right"><input type="text" id="cambioEY" disabled  class="azul"></td>
+                <td aling: "right"><input type="text" id="cambioEL" disabled  class="azul"></td>
+                <!--Yen-->
+            </tr>
+            <tr>
+                <td class="moneda"><img src="./img/japon.gif" alt="Japón" width="30px"> <br>Yen</td>
+                <td aling: "right"><input type="text" id="cambioYD" disabled  class="azul"></td>
+                <td aling: "right"><input type="text" id="cambioYE" disabled  class="azul"></td>
+                <td><input type="text" class="rojo" disabled></td>
+                <td aling: "right"><input type="text" id="cambioYL" disabled  class="azul"></td>
+            </tr>
+            <!--Libra-->
+            <tr>
+                <td class="moneda"><img src="./img/ingla.gif" alt="Inglaterra" width="30px"> <br>Libra</td>
+                <td aling: "right"><input type="text" id="cambioLD" disabled  class="azul"></td>
+                <td aling: "right"><input type="text" id="cambioLE" disabled  class="azul"></td>
+                <td aling: "right"><input type="text" id="cambioLY" disabled  class="azul"></td>
+                <td><input type="text" class="rojo" disabled></td>
+            </tr>
+        </table>
+    </div>
+    
+   
+</body>
+
+</html>

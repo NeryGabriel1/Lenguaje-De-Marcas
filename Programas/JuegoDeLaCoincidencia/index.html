@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #marco {
+            margin: 80px auto;
+            background-color: rgb(29, 154, 222);
+        }
+
+        #suerte {
+            margin: 0 auto;
+            /* Ajustado a 0 para centrar correctamente */
+            width: 50px;
+            height: 50px;
+            background-color: rgb(0, 255, 0);
+            color: white;
+            text-align: center;
+            text-shadow: 1px -1px;
+            /* Corregido para aplicar un efecto de sombra adecuado */
+            font-size: 3rem;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", () => { inicio(); });
+        var finJuego = 0;
+        var dim;
+        /***********************************************************************/
+        function pedirDimensio() {
+            dim = 0;
+            do {
+                dim = parseInt(prompt("Dime la dimension de juego que quieres pero tiene que ser par"));
+            } while (((1 < dim && dim < 9) && dim % 2 === 0))
+        }
+        pedirDimensio();
+        /***********************************************************************/
+        var array = new Array(dim * 2);
+        function rellenarhueco() {
+            for (let i = 0; i < dim * 2; i++) {
+                array[i] = 0;
+            }
+        }
+        /*********************************************************************/
+        function numero_ramdom_matriz() {
+            for (let i = 1; i <= dim; i++) {
+                for (let j = 1; j <= 2; j++) {
+                    let index;
+                    do {
+                        index = alea(0, array.length - 1);
+                    } while (array[index] !== 0);
+                    array[index] = (i * 10) + j;
+                }
+            }
+        }
+        console.log(array);
+        /*********************************************************************/
+        function alea(li, ls) {
+            return parseInt(Math.random() * (ls - li + 1)) + li;
+        }
+        var empezar = true;
+        function inicio() {
+            let destino = document.getElementById("marco");
+            let ancho = dim > 2 ? parseInt(dim / 2) : dim;
+            const y = 100;
+            destino.style.width = (ancho * y) + "px";
+
+            rellenarhueco();
+            numero_ramdom_matriz()
+
+            for (let i = 0; i < array.length; i++) {
+                ponImg(destino, array[i], y);
+            }
+            // para actualizar los aciertos
+            var aciertos = document.getElementById("suerte");
+        }
+
+        let primerClic = null;
+        let segundoClic = null;
+        /*********************************************************************/
+
+        function ponImg(des, id, ancho) {
+            let img = document.createElement("img");
+            img.setAttribute("src", "./img/numeros/fondo.png");
+            img.setAttribute("width", ancho);
+            img.setAttribute("height", ancho);
+            img.setAttribute("id", id);
+            img.setAttribute("class", "no_clickeado");
+            des.appendChild(img);
+
+            img.addEventListener("dblclick", () => { cambio(img); });
+        }
+
+        /*********************************************************************/
+        function cambio(imagen) {
+            if (imagen.className === "no_clickeado") {
+                let numImg = comprobarNumero(imagen.id);
+                imagen.src = "./img/numeros/numero_" + numImg + ".png";
+                imagen.setAttribute("class", "clickeado");
+                if (primerClic === null) {
+                    primerClic = imagen;
+                } else {
+                    segundoClic = imagen;
+                    setTimeout(verificar_Img, 700);
+                }
+            } else {
+                alert("Elige una imagen que esté disponible.");
+            }
+
+        }
+
+        /*********************************************************************/
+
+        function verificar_Img() {
+            let numImg1 = comprobarNumero(primerClic.id);
+            let numImg2 = comprobarNumero(segundoClic.id);
+
+            if (numImg1 !== numImg2) {
+                // Si son diferentes, voltear las imágenes nuevamente
+                primerClic.setAttribute("class", "no_clickeado");
+                segundoClic.setAttribute("class", "no_clickeado");
+
+                primerClic.src = "./img/numeros/fondo.png";
+                segundoClic.src = "./img/numeros/fondo.png";
+            } else {
+                ++finJuego;
+                aciertos.innerHTML = finJuego;
+            }
+            // Reiniciar las variables de primer y segundo clic
+            primerClic = null;
+            segundoClic = null;
+            if (finJuego === (dim)) {
+                setTimeout(reiniciar, 1000);
+            }
+        }
+
+        /*********************************************************************/
+        function comprobarNumero(cadena) {
+            return cadena[0];
+        }
+    </script>
+</head>
+
+<body>
+    <div id="marco"></div>
+    <p id="suerte">0</p>
+</body>
+
+</html>

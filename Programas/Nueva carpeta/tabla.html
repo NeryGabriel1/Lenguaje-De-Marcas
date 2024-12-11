@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+
+    <style>
+        table caption{
+            font-size: 1rem;font-weight: bold;background-color: red;color:white;
+        }
+        table thead{
+            background-color: blueviolet;
+            color:black
+        }
+        table tbody tbody tr:nth-child(even){
+            background-color: rgb(127, 255, 193);
+        } table tbody tbody tr:nth-child(odd){
+            background-color: rgb(127, 138, 255);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var tabla="<table align='center' border=1>";
+            tabla +="<CAPTION>Tabla de Multiplicar</CAPTION>";
+        tabla +=cabecera();    
+        tabla +="<tbody>";
+        for(let i=1;i<=10;i++){
+            tabla +="<tr><th>"+i+"</th>";
+            for(let j=1;j<=10;j++){
+                tabla +="<td>"+(i*j)+"</td>";
+            }
+            tabla +="</tr>";
+        }
+        tabla +="</tbody>"; 
+        tabla +="</table>";
+        document.write(tabla);
+           
+            function cabecera(){
+                var linea="<thead><tr><th></th>";
+                    for(let i=1;i<=10;i++) linea +="<th>"+i+"</th>";
+ 
+                    linea +="</tr></thead>";
+                return linea;    
+            }
+    </script>
+</body>
+</html>

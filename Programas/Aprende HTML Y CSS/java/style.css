@@ -1,0 +1,216 @@
+
+@font-face{
+    font-family: 'Coco-Gothic';
+    src: url('../font/CocoGothic-Bold_trial.ttf');
+    font-style: bold;
+  }
+  @font-face {
+    font-family: 'Coco-Gothic-Fat';
+    src: url(../font/CocoGothic-Fat_trial.ttf);
+  }
+  @font-face {
+    font-family: 'Coco-Gothic-Light';
+    src: url(../font/CocoGothic-Light_trial.ttf);
+  }
+  a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Coco-Gothic';
+  }
+
+body{
+    font-family: 'Coco-Gothic-Light'; 
+    margin: 0;
+    background-color: #FFDE59;
+    padding: 0;
+    text-align: center;
+    font-size: 120%;
+}
+  a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Coco-Gothic';
+  }
+
+  p{
+    font-family: 'Coco-Gothic-Light';
+  }
+h1{
+  
+  font-family: 'Coco-Gothic-Fat';
+}
+
+
+.contenedor{
+    float: left;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,5%);
+    width: 70%;
+    height: 70%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.encabezado{
+    background-color: white;
+    min-width: 300px;
+    width: 70%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+}
+
+.categoria{
+    font-size: 18px;
+    background-color: #D9D9D9;
+    right: 20%;
+    height: 18px;
+    width: 64px; /* Ajusta el ancho al pasar el ratón */
+    border-radius: 5px; /* Cambia a un botón rectangular */
+    margin-right: 8px;
+    opacity: 1;
+    padding: 4px;
+    transition: 0.5s ease;
+}
+.numpreguntas{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.categoria:hover{
+    transform: scale(105%);
+}
+
+.pregunta{
+    padding: 10px;
+    font-family: 'Coco-Gothic';
+}
+
+
+
+/*Para representar una imagen en las preguntas*/
+.imagen{
+    object-fit: scale-down;
+    height: 200px;
+    width: 30%;
+}
+
+/*Para dar estilo a los botones de opción*/
+.btn{
+    border-radius: 3px;
+    background: #fff;
+    width: 60%;
+    max-width: 550px;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*Cambiar el color del botón cuando se ejecute*/
+.btn:hover{
+    background: #c0c0c0;
+    cursor: pointer;
+}
+.btn:active{
+    background: #a3a3a3;
+}
+
+/*Para aplicar una transición suave a todos los elementos*/
+*{
+    transition: all 0.3s;
+}
+.mac-bar {
+    background-color: #A6A6A6; /* Gris */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    z-index: 1000;  
+}
+
+.mac-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Esta es la transición suave */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.mac-button span {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 10px; /* Este es el tamaño de la letra*/
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease; /* Transición suave de opacidad y ancho */
+}
+
+.mac-button:hover {
+    width: 40px; /* Ajusta el ancho al pasar el ratón */
+    border-radius: 5px; /* Cambia a un botón rectangular */
+}
+
+.mac-button:hover span {
+    opacity: 1;
+}
+
+.html {
+    background-color: #FF8E51; /* COLOR HTML */
+}
+
+.css {
+    background-color: #5271FF; /* COLOR CSS */
+}
+
+.test {
+    background-color: #FFDE59; /* COLOR TEST */
+}
+
+.title {
+  font-family: 'Coco-Gothic';
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.gris{
+  background-color: #D9D9D9;
+  right: 20%;
+  height: 18px;
+  width: 48px; /* Ajusta el ancho al pasar el ratón */
+  border-radius: 5px; /* Cambia a un botón rectangular */
+  margin-right: 8px;
+  opacity: 1;
+}
+.gris:hover{
+  width: 48px;
+  height: 18px;
+}
+.gris:active{
+  transform: scale(105%);
+}
+.gris span{
+  opacity: 1;
+}
+.gris a{
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+    padding: 20px;
+}

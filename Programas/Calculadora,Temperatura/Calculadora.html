@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #marco {
+            width: 80%;
+            max-width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            border: 10px ridge gold;
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        #marco label {
+            display: inline-block;
+            width: 100px;
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function cambio() {
+            var cadena = document.getElementById("n1").value
+                + document.getElementById("operacion").value
+                + document.getElementById("n2").value;
+            alert(eval(cadena));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="marco">
+
+        <p><label for="">Numero 1</label>
+            <input type="number" value="0" id="n1" onchange="cambio()">
+        </p>
+        <select id="operacion" onchange="cambio()">
+            <option value="+">Sumar</option>
+            <option value="-">Restar</option>
+            <option value="*">Multiplicar</option>
+            <option value="/">Dividir</option>
+        </select>
+        <p><label for="">Numero 2</label>
+            <input type="number" value="0" id="n2" onchange="cambio()">
+        </p>
+    </div>
+</body>
+
+</html>

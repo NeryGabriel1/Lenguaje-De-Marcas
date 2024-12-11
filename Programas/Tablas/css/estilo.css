@@ -1,0 +1,40 @@
+body{
+    background-color: #4B80B1;
+    margin: 40px;
+    padding: 0px;
+}
+
+#contenedor{
+    background-color: aqua;
+    border-radius: 25px;
+    border-spacing: 25px;
+    display: table;
+    height: 100%;
+    margin: 0px auto;
+    width: 800px;
+    padding: 30px;
+
+}
+
+.fila{
+    display: table-row;
+    height: 100%;
+}
+
+.principal, .secundario{
+    display: table-cell;
+    border: white 8px outset;
+    vertical-align: middle;
+    padding: 40px;
+}
+
+.secundario pre, .principal table{
+    margin: 0px auto;
+    font-size: 1.2rem;
+}
+
+caption{
+    background-color: yellow;
+    border: 4px ridge green;
+    text-transform: uppercase;
+}

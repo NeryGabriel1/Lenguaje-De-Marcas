@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones</title>
+    <style>
+        #marco {
+            text-align: center; 
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid #054f26 ;
+            border-radius: 10px;
+        }
+        p {
+            text-align: center;
+        }
+        input[type="number"] {
+            text-align: right;
+        }
+        select {
+            width: 50px;
+            padding: 5px;
+        }
+        #resultado {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+    <script>
+        suma = function(a, b) {
+            return a + b;
+        }
+        resta = function(a, b) {
+            return a - b;
+        }
+        multiplicacion = function(a, b) {
+            return a * b;
+        }
+
+        function cambio() {
+            let a = parseInt(document.getElementById("n1").value);
+            let b = parseInt(document.getElementById("n2").value);
+            let op = document.getElementById("operaciones").value;
+            document.getElementById("resultado").innerHTML = window[op](a, b);
+        }
+
+        function inicio() {
+            document.getElementById("n1").addEventListener("change", cambio);
+            document.getElementById("n2").addEventListener("change", cambio);
+            document.getElementById("operaciones").addEventListener("change", cambio);
+        }
+
+        window.addEventListener("load", inicio);
+    </script>
+</head>
+<body>  
+    <div id="marco">
+        <p>
+            <label for="Numero1">Número 1:</label>
+            <input type="number" id="n1" value="0">
+        </p>
+        <p>
+            <label for="operaciones">Operación:</label>
+            <select id="operaciones">
+                <option value="suma">+</option>
+                <option value="resta">-</option>
+                <option value="multiplicacion">*</option>
+            </select>
+        </p>
+        <p>
+            <label for="Numero2">Número 2:</label>
+            <input type="number" id="n2" value="0">
+        </p>
+        <p>
+            <label for="resultado">Resultado:</label>
+            <span id="resultado">0</span>
+        </p>
+    </div>
+</body>
+</html>

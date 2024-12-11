@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #marco{
+        margin: 20px auto;
+        border:5px ridge gold;
+        width:100px;
+        height: 100px;
+    }
+    </style>
+    <script>
+     //var turno=true;
+    var actual=1;
+     function alea(li,ls){
+          let a=Math.floor((Math.random()*(ls-li+1)))+li;
+          return parseInt(a);
+        }
+        function cambio(origen){
+            if(++actual==9)actual=1;
+            //let n=alea(1,8);
+            origen.src="./img/numeros/numero_"+actual+".png";
+           /*
+            if(turno){
+                origen.src="./img/numeros/numero_2.png"
+            }else{
+            origen.src="./img/numeros/numero_1.png"
+            }
+             turno=!turno;
+             */
+        }
+        function inicio(){
+            let z=document.getElementById("imagen");
+            setInterval( function(){ cambio(z); }, 1000)
+        }
+
+    </script>
+</head>
+<body onload="inicio()">
+    <div id=marco><img id="imagen" onclick="cambio(this)" src="img/numeros/numero_1.png" alt=""></div>
+    
+</body>
+</html>

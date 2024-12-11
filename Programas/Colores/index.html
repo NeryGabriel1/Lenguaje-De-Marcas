@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=g, initial-scale=1.0">
+    <title>Cambiar de color radio</title>
+ 
+    <style>
+        fieldset{
+            width: 300px;
+            margin:20px auto;
+            border: 5px gold ridge;
+        }
+ 
+        #result{
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border: 5px solid black;
+        }
+    </style>
+    <script>
+ 
+        function cambio(){
+            var ele=document.getElementsByName('colores');
+            for(i=0;i<ele.length;i++){
+                if(ele[i].checked)
+                document.getElementById("result").style.backgroundColor=ele[i].value;
+            }
+        }
+        window.addEventListener("load",()=>{cambio();});
+</script>
+ 
+</head>
+<body>
+ 
+    <fieldset>
+        <legend>Colores</legend>
+        <input onchange="cambio()" type="radio" name="colores" value="green">Verde
+        <input onchange="cambio()" type="radio" name="colores" value="red">Rojo
+        <input onchange="cambio()" type="radio" name="colores" value="yellow">Amarillo<br>
+</fieldset>
+<div id="result"></div>
+ 
+</body>
+</html>

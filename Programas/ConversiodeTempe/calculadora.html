@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid #054f26 ;
+            border-radius: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #13c62b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><u>Calculadora</u></h2>
+        <form id="calculatorForm">
+            <label for="number1">Número 1:</label>
+            <input type="number" id="number1" name="number1" required>
+            <br><br>
+            <label for="number2">Número 2:</label>
+            <input type="number" id="number2" name="number2" required>
+            <br><br>
+            <label for="operation">Operación:</label>
+            <select id="operation" name="operation" required>
+                <option value="sum">Suma</option>
+                <option value="subtract">Resta</option>
+                <option value="multiply">Multiplicación</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="calculate()">Calcular</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            const operation = document.getElementById('operation').value;
+            let result;
+
+            if (isNaN(number1) || isNaN(number2)) {
+                document.getElementById('result').innerText = "Por favor, ingrese números válidos.";
+                return;
+            }
+
+            switch (operation) {
+                case 'sum':
+                    result = number1 + number2;
+                    break;
+                case 'subtract':
+                    result = number1 - number2;
+                    break;
+                case 'multiply':
+                    result = number1 * number2;
+                    break;
+                default:
+                    result = "Operación no válida";
+            }
+
+            document.getElementById('result').innerText = "Resultado: " + result;
+        }
+    </script>
+</body>
+</html>

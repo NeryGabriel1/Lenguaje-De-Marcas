@@ -1,0 +1,72 @@
+[12:45] Lara Sono de la Viuda
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binario</title>
+    <style>
+ 
+    </style>
+    <script>
+        function inicio() {
+            for (let k=1;k<=4;k++){
+            let destino=document.getElementById('snumeros_'+k);
+            for (let i=0; i<=255;i++) {
+                let op=document.createElement("option");
+                op.text=i;
+                op.value=i;
+                destino.appendChild(op);
+            }
+            destino.addEventListener('change',()=>{ scambio(destino);});
+ 
+            let otro = document.getElementById('numeros_'+k);
+            otro.addEventListener('input', () => { cambio(otro);})
+        }
+    }
+        function scambio(destino) {
+            var n=(destino.id).substring((destino.id).indexOf('_')+1);
+            document.getElementById('numeros_'+n).value = destino.value;
+            binario(n);
+        }
+        function cambio(destino) {
+            var n=(destino.id).substring((destino.id).indexOf('_')+1);
+            document.getElementById('snumeros_'+n).value = destino.value;
+            binario(n);
+        }
+        function binario(a) {
+            var n=document.getElementById('snumeros_'+a).value;
+            var cadena="";
+            while(n!=0) {
+                cadena=(n%2)+cadena;
+                n=parseInt(n/2);
+            }
+            var m = 8 - cadena.length;
+            document.getElementById('pnumeros_'+a).innerHTML ='0'.repeat(m)+cadena;
+        }
+        window.addEventListener('load', function () { inicio(); })
+    </script>
+</head>
+ 
+<body>
+    <div id="marco">
+        <p> <input type="range" id="numeros_1" min="0" max="255" value="0">
+            <select id="snumeros_1"></select>&nbsp;&nbsp; <label id="pnumeros_1"></label></p>
+ 
+        <p> <input type="range" id="numeros_2" min="0" max="255" value="0">
+            <select id="snumeros_2"></select>&nbsp;&nbsp; <label id="pnumeros_2"></label></p>
+ 
+        <p> <input type="range" id="numeros_3" min="0" max="255" value="0">
+            <select id="snumeros_3"></select>&nbsp;&nbsp; <label id="pnumeros_3"></label></p>
+ 
+        <p> <input type="range" id="numeros_4" min="0" max="255" value="0">
+            <select id="snumeros_4"></select>&nbsp;&nbsp; <label id="pnumeros_4"></label></p>
+ 
+    </div>
+   
+</body>
+<p id="dime"></p>
+</html>
+ 
+ 

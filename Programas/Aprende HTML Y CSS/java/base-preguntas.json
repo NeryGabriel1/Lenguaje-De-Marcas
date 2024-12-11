@@ -1,0 +1,114 @@
+ 
+ [
+    {
+        "numpreguntas" : "Pregunta: 1",
+        "categoria": "HTML",
+        "pregunta": "¿HTML es un lenguaje de programación?",
+        "incorrecta3": "No, es una base de datos.",
+        "incorrecta1": "Sí, es un lenguaje de programación parecido a JAVA.",
+        "incorrecta2": "Es una extensión de CSS3",
+        "respuesta": "No",
+        "imagen": "html.png",
+        "object_fit": "cover"
+    },
+
+    {
+        "numpreguntas" : "Pregunta: 2",
+        "categoria": "CSS",
+        "pregunta": "¿CSS es un lenguaje de programación?",
+        "incorrecta3": "No, es una base de datos.",
+        "incorrecta1": "Sí, es un lenguaje de programación parecido a PYTHON.",
+        "incorrecta2": "Es una extensión de HTML",
+        "respuesta": "No",
+        "imagen": "css.png",
+        "object_fit": "cover"
+    },
+    {
+      "numpreguntas" : "Pregunta: 3",
+      "categoria": "HTML",
+      "pregunta": "¿Cuál es el propósito de la etiqueta head en HTML?",
+      "incorrecta1": "Definir el contenido principal",
+      "incorrecta2": "Contener información sobre el atributo type",
+      "incorrecta3": "Mostrar el encabezado del documento",
+      "respuesta": "Contener información sobre el documento",
+      "imagen": "html.png",
+      "object_fit": "cover"
+    },
+    {
+      "numpreguntas" : "Pregunta: 4",
+      "categoria": "CSS",
+      "pregunta": "¿Qué propiedad se utiliza para establecer el fondo de un elemento en CSS?",
+      "incorrecta1": "color-fondo",
+      "incorrecta2": "color",
+      "incorrecta3": "border",
+      "respuesta": "background",
+      "imagen": "css.png",
+      "object_fit": "cover"
+    },
+    {
+        "numpreguntas" : "Pregunta: 5",
+        "categoria": "HTML",
+        "pregunta": "¿Cuál es el elemento principal en HTML?",
+        "incorrecta1": "head",
+        "incorrecta2": "body",
+        "incorrecta3": "footer",
+        "respuesta": "html",
+        "imagen": "html.png",
+        "object_fit": "cover"
+    },
+    {
+        "numpreguntas" : "Pregunta: 6",
+        "categoria": "CSS",
+        "pregunta": "¿Qué significa CSS?",
+        "incorrecta1": "Counter Strike Source",
+        "incorrecta2": "Computer Style Sheet",
+        "incorrecta3": "Creative Style Solutions",
+        "respuesta": "Cascading Style Sheets",
+        "imagen": "css.png",
+        "object_fit": "cover"
+      },
+      {
+        "numpreguntas" : "Pregunta: 7",
+        "categoria": "HTML",
+        "pregunta": "¿Qué significa HTML?",
+        "incorrecta1": "Hyper Text Markup Languages",
+        "incorrecta2": "High Tech Modern Language",
+        "incorrecta3": "Home Tool Management Language",
+        "respuesta": "Hyper Text Markup Language",
+        "imagen": "html.png",
+        "object_fit": "cover"
+    },
+    {
+        "numpreguntas" : "Pregunta: 8",
+        "categoria": "CSS",
+        "pregunta": "¿Qué propiedad se utiliza para establecer un color de fondo sólido en CSS?",
+        "incorrecta1": "background-repeat",
+        "incorrecta2": "color",
+        "incorrecta3": "border",
+        "respuesta": "background-color",
+        "imagen": "css.png",
+        "object_fit": "cover"
+      },
+      {
+        "numpreguntas" : "Pregunta: 9",
+        "categoria": "HTML",
+        "pregunta": "¿Cuál es el propósito de la etiqueta meta en HTML?",
+        "incorrecta1": "Definir el contenido principal",
+        "incorrecta2": "Contener información sobre el documento",
+        "incorrecta3": "Mostrar el encabezado del documento",
+        "respuesta": "Proporcionar metadatos sobre el documento",
+        "imagen": "html.png",
+        "object_fit": "cover"
+    },
+    {
+      "numpreguntas" : "Pregunta: 10",
+      "categoria": "CSS",
+      "pregunta": "¿Para qué se utiliza el combinador de descendientes en CSS?",
+      "incorrecta1": "Vincular elementos por su posición en el documento",
+      "incorrecta2": "Conectar dos selectores de clase",
+      "incorrecta3": "Seleccionar elementos hermanos directos",
+      "respuesta": "Seleccionar un elemento que es descendiente directo de otro elemento",
+      "imagen": "css.png",
+      "object_fit": "cover"
+  }
+ ]

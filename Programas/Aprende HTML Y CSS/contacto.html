@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aprendamos HTML y CSS</title>
+  <link rel="stylesheet" type="text/css" href="css/styleInfor.css">
+</head>
+<body>
+<div class="margen">
+  <div class="mac-bar">
+    <div class="mac-button html"><span><a href="html.html" class="enlace">HTML</a></span></div>
+    <div class="mac-button css"><span><a href="css.html" class="enlace">CSS</a></span></div>
+    <div class="mac-button test"><span><a href="java/test.html" class="enlace">TEST</a></span></div>
+    <div class="title">Aprendamos HTML</div>
+    <div class="mac-button gris"><span><a href="#menu">Menú</a></span></a></div>
+    <div class="mac-button gris"><span><a href="contacto.html">Contacto</a></span></a></div>
+    <div class="mac-button gris"><span><a href="index.html">Inicio</a></span></a></div> 
+
+  </div>
+
+
+  <h1 class="titlec">Contactos</h1>
+  
+  <form action="#" method="post">
+    
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+\s([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+\s?){0,4}" maxlength="50" required><br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" pattern="\+\d{2}\s\d{3}\s\d{7}" placeholder="+34 123 4567890" required><br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="opinion">Opinión sobre el servicio:</label><br>
+    <textarea id="opinion" name="opinion" rows="7" cols="50" maxlength="20"></textarea><br><br>
+
+    <label for="calificacion">Calificación (0-10):</label>
+    <input type="number" id="calificacion" name="calificacion" min="0" max="10" required><br><br>
+
+    <label for="notificaciones-sms">Notificaciones por SMS:</label><br>
+    <input type="radio" id="si" name="notificaciones-sms" value="si" required>
+    <label for="si">Sí</label>
+    <input type="radio" id="no" name="notificaciones-sms" value="no" required>
+    <label for="no">No</label><br><br>
+
+    <label for="condiciones">Acepto las condiciones del servicio:</label>
+    <input type="checkbox" id="condiciones" name="condiciones" required><br><br>
+
+    <label for="info-condiciones">Condiciones del servicio:</label><br>
+    <textarea id="info-condiciones" rows="10" cols="50" readonly>
+        Al utilizar nuestro servicio de venta de ayuda, aceptas cumplir:
+        Uso Apropiado: Utilizar los recursos de manera ética y legal.
+        Actualizaciones: Estar al tanto de posibles cambios en HTML y CSS.
+    </textarea><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Reiniciar">
+    </div>
+   
+    
+  </form>
+
+<footer>
+    <p>APRENDIENDO HTML y CSS </p><br>
+    <p>Integrantes: Pedro Lorenzo, Eduardo Franco, Nery Benitez.</p>
+    <a href="contacto.html"><button class="botonfooter">CONTACTO</button></a>
+</footer>
+
+
+</body>
+</html>

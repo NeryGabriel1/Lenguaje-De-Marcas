@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendamos HTML y CSS</title>
+  <link rel="stylesheet" type="text/css" href="css/styleCss.css">
+</head>
+
+<body>
+  <div class="mac-bar">
+    <div class="mac-button html"><span><a href="html.html" class="enlace">HTML</a></span></div>
+    <div class="mac-button css"><span><a href="css.html" class="enlace">CSS</a></span></div>
+    <div class="mac-button test"><span><a href="java/test.html" class="enlace">TEST</a></span></div>
+    <div class="title">Aprendamos CSS</div>
+    <div class="mac-button gris"><span><a href="#menu">Menú</a></span></a></div>
+    <div class="mac-button gris"><span><a href="contacto.html">Contacto</a></span></a></div>
+    <div class="mac-button gris"><span><a href="index.html">Inicio</a></span></a></div>
+
+  </div>
+
+  <section id="Inicio">
+    <div class="cajaprincipal" id="menu">
+      <div class="landing_left">
+        <div class="cajaencabezado">
+          <div class="landing_text up">
+            <h1 class="encabezado">AULA INFORMÁTICA</h1>
+          </div>
+          <div class="landing_text mid">
+            <h1 class="encabezado">LENGUAJE DE MARCADO</h1>
+          </div>
+          <div class="landing_text down">
+            <h1>Clase de CSS</h1>
+          </div>
+        </div>
+      </div>
+      <div class="landing_right">
+        <div class="cajadirecciones">
+
+          <div class="item">
+            <a href="#quees" class="enlace">
+              <div class="landing_img" style="background-color: #DBE5EE;">
+                <img src="img/hazul.svg" alt="Hoja azul">
+              </div>
+              <h2>¿Qué es?</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#porque_css" class="enlace">
+              <div class="landing_img" style="background-color: #5CD1FF;">
+                <img src="img/notas.svg" alt="">
+              </div>
+              <h2>¿Por qué utilizar?</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#sintaxis_css" class="enlace">
+              <div class="landing_img" style="background-color: #FF8E51;">
+                <img src="img/persona.svg" alt="Persona">
+              </div>
+              <h2>Sintaxis</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#selectores_css" class="enlace">
+              <div class="landing_img" style="background-color: #F9B2DC;">
+
+                <img src="img/reloj.svg" alt="">
+              </div>
+              <h2>Selectores</h2>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#cómo_css" class="enlace">
+              <div class="landing_img" style="background-color: #FFD83F;">
+                <img src="img/bombilla.svg" alt="">
+              </div>
+              <h2>¿Cómo Agregar?</h2>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#esquema_css" class="enlace">
+              <div class="landing_img" style="background-color: #9C8BEF;">
+                <img src="img/hazul.svg" alt="">
+              </div>
+              <h2>Esquemas</h2>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#practicas_css" class="enlace">
+              <div class="landing_img" style="background-color: #9C8BEF;">
+                <img src="img/pruebatest.svg" alt="">
+              </div>
+              <h2><a href="css.html">Prácticas</a></h2>
+            </a>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="generalbox">
+    <section id="quees">
+      <h2>¿Qué es CSS?</h2>
+      <p> CSS significa hojas de estilo en cascada</p>
+      <p> CSS describe cómo se deben mostrar los elementos HTML en la pantalla, en papel o en otros medios.</p>
+      <p>CSS ahorra mucho trabajo. Puede controlar el diseño de varias páginas web a la vez.</p>
+      <p>Las hojas de estilo externas se almacenan en archivos CSS</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8cSo0ijtkzU" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="porque_css">
+      <h2>¿Por qué utilizar CSS?</h2>
+
+      <p>CSS se utiliza para definir estilos para sus páginas web, incluido el diseño, la disposición y las variaciones
+        en la visualización para diferentes dispositivos y tamaños de pantalla.</p>
+
+      <h2>Ejemplo de CSS</h2>
+      body {<br>
+      background-color: lightblue;<br>
+      }
+      <br>
+      h1 {<br>
+      color: white;<br>
+      text-align: center;<br>
+      }
+      <br>
+      p {<br>
+      font-family: verdana;<br>
+      font-size: 20px;<br>
+      }
+    </section>
+
+    <section id="sintaxis_css">
+      <h2>Sintaxis CSS</h2>
+
+      <p>Una regla CSS consta de un selector y un bloque de declaración.</p>
+      <img src="img/sintaxisCss.png" alt="Sintaxis">
+
+      <p>El selector apunta al elemento HTML al que desea aplicar estilo.</p>
+      <p> El bloque de declaración contiene una o más declaraciones separadas por punto y coma.</p>
+      <p> Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos.</p>
+      <p> Varias declaraciones CSS están separadas por punto y coma y los bloques de declaración están rodeados por
+        llaves.</p>
+
+      <h2>Ejemplo</h2>
+      <p>En este ejemplo, todos los elementos &lt;p&gt; estarán alineados al centro, con un color de texto rojo:</p>
+      p {<br>
+      color: red;<br>
+      text-align: center;<br>
+      }
+
+      <h2>Ejemplo explicado</h2>
+      <p>&lt;p&gt;es un selector en CSS (apunta al elemento HTML al que desea aplicar estilo: &lt;p&gt;).</p>
+      <p>colores una propiedad y redes el valor de la propiedad</p>
+      <p>text-alignes una propiedad y centeres el valor de la propiedad</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gDU-GogqUHg" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="selectores_css">
+      <h2>Selectores CSS</h2>
+
+      <p>Los selectores CSS se utilizan para "buscar" (o seleccionar) los elementos HTML a los que desea aplicar estilo.
+      </p>
+      <p>Podemos dividir los selectores CSS en cinco categorías:</p>
+      <ul>
+        <li>Selectores simples (seleccione elementos según el nombre, identificación, clase)</li>
+        <li>Selectores combinadores (selecciona elementos en función de una relación específica entre ellos)</li>
+        <li>Selectores de pseudoclase (seleccionan elementos según un determinado estado)</li>
+        <li>Selectores de pseudoelementos (seleccionan y aplican estilo a una parte de un elemento)</li>
+        <li>Selectores de atributos (seleccione elementos según un atributo o valor de atributo)</li>
+      </ul>
+      <p>Esta página explicará los selectores CSS más básicos.</p>
+
+      <h2>El selector de elementos CSS</h2>
+
+      <p>El selector de elementos selecciona elementos HTML según el nombre del elemento.</p>
+      <h2>Ejemplo</h2>
+      <p>Aquí, todos los elementos &lt;p&gt; de la página estarán alineados al centro, con un color de texto rojo.</p>
+
+      p {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }
+
+      <h2>El selector de identificación CSS</h2>
+      <p>El selector de identificación utiliza el atributo de identificación de un elemento HTML para seleccionar un
+        elemento específico.</p>
+      <p>La identificación de un elemento es única dentro de una página, por lo que el selector de identificación se usa
+        para seleccionar un elemento único.</p>
+      <p>Para seleccionar un elemento con una identificación específica, escriba un carácter almohadilla (#), seguido de
+        la identificación del elemento.</p>
+      <h2>Ejemplo</h2>
+      <p>La siguiente regla CSS se aplicará al elemento HTML con id="para1".</p>
+
+      #para1 {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }
+
+      <p>Nota: ¡ Un nombre de identificación no puede comenzar con un número!</p>
+
+      <h2>El selector de clases CSS</h2>
+      <p>El selector de clases selecciona elementos HTML con un atributo de clase específico.</p>
+      <p>Para seleccionar elementos con una clase específica, escriba un carácter de punto (.), seguido del nombre de la
+        clase.</p>
+      <h2>Ejemplo</h2>
+      <p>En este ejemplo, todos los elementos HTML con class="center" serán rojos y estarán alineados en el centro.</p>
+
+      .center {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }
+
+      <p>También puede especificar que una clase solo deba afectar a elementos HTML específicos.</p>
+      <h2>Ejemplo</h2>
+      <p>En este ejemplo, solo los elementos &lt;p&gt; con class="center" serán rojos y estarán alineados al centro.</p>
+
+      p.center {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }
+
+      <p>Los elementos HTML también pueden hacer referencia a más de una clase.</p>
+      <h2>Ejemplo</h2>
+      <p>En este ejemplo, el estilo del elemento &lt;p&gt; se ajustará a class="center" y class="large".</p>
+      &lt;p class="center large"&gt;This paragraph refers to two classes.</p>
+      <p>Nota: ¡ El nombre de una clase no puede comenzar con un número!</p>
+
+      <h2>El selector universal de CSS</h2>
+      <p>El selector universal (*) selecciona todos los elementos HTML de la página.</p>
+      <h2>Ejemplo</h2>
+      <p>La siguiente regla CSS afectará a todos los elementos HTML de la página.</p>
+
+      * {<br>
+      text-align: center;<br>
+      color: blue;<br>
+      }
+
+      <h2>El selector de agrupación CSS</h2>
+      <p>El selector de agrupación selecciona todos los elementos HTML con las mismas definiciones de estilo.</p>
+      <p>Mire el siguiente código CSS (los elementos h1, h2 y p tienen las mismas definiciones de estilo).</p>
+      <p>Será mejor agrupar los selectores para minimizar el código.</p>
+      <p>Para agrupar selectores, separe cada selector con una coma.</p>
+      <h2>Ejemplo</h2>
+      <p>En este ejemplo hemos agrupado los selectores del código anterior.</p>
+
+      h1 {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }<br>
+      <br>
+      h2 {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }<br>
+      <br>
+      p {<br>
+      text-align: center;<br>
+      color: red;<br>
+      }
+
+      <table border="1">
+        <tr>
+          <th>Selector</th>
+          <th>Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td>#id</td>
+          <td>#firstname</td>
+          <td>Selects the element with id="firstname"</td>
+        </tr>
+        <tr>
+          <td>.class</td>
+          <td>.intro</td>
+          <td>Selects all elements with class="intro"</td>
+        </tr>
+        <tr>
+          <td>element.class</td>
+          <td>p.intro</td>
+          <td>Selects only <p> elements with class="intro"</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>*</td>
+          <td>Selects all elements</td>
+        </tr>
+        <tr>
+          <td>element</td>
+          <td>p</td>
+          <td>Selects all <p> elements</td>
+        </tr>
+        <tr>
+          <td>element,element,..</td>
+          <td>div, p</td>
+          <td>Selects all <div> elements and all &lt;p&gt; elements</td>
+        </tr>
+      </table>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_Nnrb5zwydc" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="cómo_css">
+      <h2>Cómo agregar CSS</h2>
+
+      <p>Cuando un navegador lee una hoja de estilo, formateará el documento HTML de acuerdo con la información de la
+        hoja de estilo.</p>
+      <p>Hay tres formas de insertar una hoja de estilo:</p>
+
+      <ol>
+        <li>CSS externo</li>
+        <li>CSS interno</li>
+        <li>CSS en línea</li>
+      </ol>
+
+
+
+      <h2>CSS externo</h2>
+      <p>Con una hoja de estilo externa, puedes cambiar el aspecto de un sitio web completo cambiando solo un archivo.
+      </p>
+      <p>Cada página HTML debe incluir una referencia al archivo de hoja de estilo externo dentro del elemento
+        <code><link></code>, dentro de la sección <code><head></code>.
+      </p>
+
+      <h2>CSS interno</h2>
+      <p>Se puede utilizar una hoja de estilo interna si una sola página HTML tiene un estilo único.</p>
+      <h2>CSS en línea</h2>
+      <p>Se puede utilizar un estilo en línea para aplicar un estilo único a un solo elemento.</p>
+      <p>Para usar estilos en línea, agregue el atributo de estilo al elemento relevante. El atributo de estilo puede
+        contener cualquier propiedad CSS.</p>
+
+
+
+      <h2>Múltiples hojas de estilo</h2>
+      <p>Si se han definido algunas propiedades para el mismo selector (elemento) en diferentes hojas de estilo, se
+        utilizará el valor de la última hoja de estilo leída.</p>
+      <p>Supongamos que una hoja de estilo externa tiene el siguiente estilo para el elemento.
+
+
+      <h2>Orden en cascada</h2>
+      <p>¿Qué estilo se utilizará cuando se especifique más de un estilo para un elemento HTML?</p>
+      <p>Todos los estilos de una página se "en cascada" en una nueva hoja de estilos "virtual" según las siguientes
+        reglas, donde el número uno tiene la máxima prioridad:</p>
+      <ol>
+        <li>Estilo en línea (dentro de un elemento HTML)</li>
+        <li>Hojas de estilo externas e internas (en la sección <code><head></code>)</li>
+        <li>Navegador predeterminado</li>
+      </ol>
+      <p>Por lo tanto, un estilo en línea tiene la máxima prioridad y anulará los estilos externos e internos y los
+        valores predeterminados del navegador.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VXnwOubxVZQ" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="esquema_css">
+      <h1>Esquema CSS</h1>
+      <p>Un contorno es una línea dibujada fuera del borde del elemento.</p>
+      <p>Este elemento tiene un borde negro y un contorno verde con un ancho de 10px.</p>
+      <div style="border: 2px solid black; outline: 10px solid green; width: 200px; height: 100px;"></div>
+      <p>Esquema CSS</p>
+      <p>Un contorno es una línea que se dibuja alrededor de los elementos, FUERA de los bordes, para que el elemento
+        "resalte".</p>
+      <p>CSS tiene las siguientes propiedades de esquema:</p>
+      <ul>
+        <li>outline-style</li>
+        <li>outline-color</li>
+        <li>outline-width</li>
+        <li>outline-offset</li>
+        <li>outline</li>
+      </ul>
+      <p>Nota: ¡ El contorno difiere de los bordes ! A diferencia del borde, el contorno se dibuja fuera del borde del
+        elemento y puede superponerse a otro contenido. Además, el contorno NO forma parte de las dimensiones del
+        elemento; El ancho y alto total del elemento no se ven afectados por el ancho del contorno.</p>
+      <h2>Estilo de esquema CSS</h2>
+      <p>La propiedad outline-style especifica el estilo del contorno y puede tener uno de los siguientes valores:</p>
+      <ul>
+        <li>dotted- Define un contorno de puntos</li>
+        <li>dashed- Define un contorno discontinuo</li>
+        <li>solid- Define un contorno sólido</li>
+        <li>double- Define un doble contorno.</li>
+        <li>groove- Define un contorno ranurado 3D</li>
+        <li>ridge- Define un contorno estriado 3D</li>
+        <li>inset- Define un contorno insertado en 3D</li>
+        <li>outset- Define un esquema de inicio en 3D.</li>
+        <li>none- No define ningún contorno</li>
+        <li>hidden- Define un contorno oculto</li>
+      </ul>
+      <p>El siguiente ejemplo muestra los diferentes valores de outline-style:</p>
+      <p>Ejemplo</p>
+      <p>Demostración de los diferentes estilos de contorno:</p>
+      <style>
+        p.dotted {
+          outline-style: dotted;
+        }
+
+        p.dashed {
+          outline-style: dashed;
+        }
+
+        p.solid {
+          outline-style: solid;
+        }
+
+        p.double {
+          outline-style: double;
+        }
+
+        p.groove {
+          outline-style: groove;
+        }
+
+        p.ridge {
+          outline-style: ridge;
+        }
+
+        p.inset {
+          outline-style: inset;
+        }
+
+        p.outset {
+          outline-style: outset;
+        }
+      </style>
+      <p class="dotted">Un contorno de puntos.</p>
+      <p class="dashed">Un contorno discontinuo.</p>
+      <p class="solid">Un contorno sólido.</p>
+      <p class="double">Un doble contorno.</p>
+      <p class="groove">Un contorno ranurado 3D. El efecto depende del valor de outline-color.</p>
+      <p class="ridge">Un contorno estriado 3D. El efecto depende del valor de outline-color.</p>
+      <p class="inset">Un contorno insertado en 3D. El efecto depende del valor de outline-color.</p>
+      <p class="outset">Un esquema de inicio en 3D. El efecto depende del valor de outline-color.</p>
+      <p>Nota: Ninguna de las otras propiedades del esquema (sobre las cuales aprenderá más en los próximos capítulos)
+        tendrá NINGÚN efecto a menos que la propiedad outline-style esté configurada</p>
+
+    </section>
+
+    <section>
+      <h2>Diseño CSS - La propiedad position</h2>
+      <p>La propiedad especifica el tipo de método de posicionamiento utilizado para un elemento (estático, relativo,
+        fijo, absoluto o pegajoso).position</p>
+
+      <h3>La posición Propiedad</h3>
+      <p>La propiedad especifica el tipo de método de posicionamiento utilizado para un elemento.position. Hay cinco
+        valores de posición diferentes:</p>
+      <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>fixed</li>
+        <li>absolute</li>
+        <li>sticky</li>
+      </ul>
+      <p> A continuación, los elementos se colocan en la parte superior, inferior, izquierda y derecha propiedades. Sin
+        embargo, estas propiedades no funcionarán a menos que la propiedad position se establezca primero. También
+        funcionan de manera diferente según el valor de position.</p>
+      <p><strong>position: static;:</strong> Los elementos HTML se colocan estáticos de forma predeterminada. Los
+        elementos posicionados estáticamente no se ven afectados por las propiedades superior, inferior, izquierda y
+        derecha. Un elemento con position: static; no se coloca de ninguna manera especial; siempre se posiciona de
+        acuerdo con el flujo normal de la página.</p>
+      <h4>Ejemplo</h4>
+      /* Este elemento <div> tiene position: estática; */<br>
+        div.static {<br>
+        position: static;<br>
+        border: 3px solid #73AD21;<br>
+        }
+        <p><strong>position: relative;</strong> Un elemento con position: relative; se coloca en relación con su
+          posición normal. Si se establecen las propiedades superior, derecha, inferior e izquierda de un elemento con
+          una posición relativa, se producirá para ser ajustado lejos de su posición normal. El resto del contenido no
+          se ajustará para que quepa en ningún hueco dejado por el elemento.</p>
+        <h4>Ejemplo</h4>
+        /* Este elemento <div> tiene position: relative; */<br>
+          div.relative {<br>
+          position: relative;<br>
+          left: 30px;<br>
+          border: 3px solid #73AD21;<br>
+          }<br>
+          <p><strong>position: fixed;</strong>position: fixed;: Un elemento con position: fixed; se coloca en relación
+            con la ventana, lo que significa que siempre permanece en el mismo lugar incluso si se desplaza la página.
+            Las propiedades top, right, bottom e left se utilizan para colocar el elemento. Por ejemplo, el siguiente
+            código CSS coloca un elemento con position: fixed; en la esquina inferior derecha de la ventana del
+            navegador:</p>
+          <h4>Ejemplo</h4>
+          .elemento {<br>
+          position: fixed;<br>
+          bottom: 0;<br>
+          right: 0;<br>
+          }<br>
+          <p><strong>position: absolute;</strong> Un elemento con position: absolute; se coloca en relación con su
+            elemento padre más cercano que tenga una posición establecida. Si no hay ningún elemento padre con una
+            posición establecida, se colocará en relación con el cuerpo del documento. Las propiedades top, right,
+            bottom e left se utilizan para colocar el elemento. Por ejemplo, el siguiente código CSS coloca un elemento
+            con position: absolute; en la esquina superior derecha de su elemento padre:</p>
+          <h4>Ejemplos</h4>
+          .padre {<br>
+          position: relative;<br>
+          }<br>
+          <br>
+          .elemento {<br>
+          position: absolute;<br>
+          top: 0;<br>
+          right: 0;<br>
+          }<br>
+          <p><strong>position: sticky;</strong>Un elemento con position: sticky; se comporta como position: relative;
+            hasta que alcanza un umbral de desplazamiento específico, luego se comporta como position: fixed;. Las
+            propiedades top, right, bottom e left se utilizan para colocar el elemento. Por ejemplo, el siguiente código
+            CSS coloca un elemento con position: sticky; en la parte superior de su contenedor hasta que se desplaza
+            fuera de la vista, momento en el que se fija en la parte superior de la ventana del navegador:</p>
+          <h4>Ejemplo</h4>
+          .contenedor {<br>
+          height: 2000px;<br>
+          overflow-y: scroll;<br>
+          }<br>
+          <br>
+          .elemento {<br>
+          position: sticky;<br>
+          top: 0;<br>
+          } <br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4WlOokagtR4" frameborder="0"
+            allowfullscreen></iframe>
+    </section>
+
+    <section id="practicas_css">
+      <h2>Practica tus conomimientos</h2>
+      <p>Da clic <a href="https://www.cubicfactory.com/jseditor/">aquí</a> para ir a las página web de Practicas.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>APRENDIENDO HTML y CSS </p><br>
+    <p>Integrantes: Pedro Lorenzo, Eduardo Franco, Nery Benitez.</p>
+    <a href="contacto.html"><button class="botonfooter">CONTACTO</button></a>
+  </footer>
+</body>
+
+</html>

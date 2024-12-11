@@ -1,0 +1,73 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div, #contenedor2{
+    position: relative;
+    margin: 70px auto;
+    background-color: #EEEFFF;
+    width: 650px;
+    height: 260px;
+    padding: 20px;
+    border-radius: 23px;
+}
+.rojo{
+    background-color: #FFF994;
+}
+.azul{
+    background-color: #78C3D4;
+    color: blue;
+    font-size: 0.9em;
+}
+.input_inicial{
+    background-color:antiquewhite;
+    color: blue;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+table{
+    position: absolute;
+    margin: 5px auto;
+    left: 9%;
+}
+
+input{
+    width: 90px;
+    border-radius: 8px;
+    padding: 5px 0px 5px 3px;
+    margin: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.moneda{
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+/**********************************/
+#contenedor2{
+    width: 600px;
+    background-color: #EFEFEF;
+}
+h2{
+    width: 400px;
+    text-align: center;
+    margin: 0px auto;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+#limpiar{
+    display: block;
+    margin: 0px auto;
+    background-color: bisque;
+    width: 90px;
+    height: 30px;
+}
+
+.colorAzul{
+    color: blue;
+    font-size: 0.9em;
+    font-weight: bold;
+}

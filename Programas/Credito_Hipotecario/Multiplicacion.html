@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+ 
+    <script>
+        function inicio(){
+       var ns=[1,2,3,4,5,6,7,8,9,10];
+       var cadena="<table border=1 align='center'>";
+ 
+        cadena+="<tr><th>&nbsp;</th>";
+            ns.forEach((f)=>{
+            cadena+="<th>"+f+"</th>";  
+            });
+            cadena+="</tr>";
+       
+ 
+        ns.forEach((f)=>{
+            cadena+="<tr><th>"+f+"</th>";
+            ns.forEach((c)=>{
+                cadena+="<td>"+(f*c)+"</td>";
+            });
+            //document.write(i+" "+f+"<br>");
+            cadena+="</tr>";
+        });
+        cadena+="</table>";
+        document.write(cadena);
+    }
+        window.addEventListener("load",function(){inicio();});
+        </script>
+</head>
+<body>
+ 
+</body>
+</html>

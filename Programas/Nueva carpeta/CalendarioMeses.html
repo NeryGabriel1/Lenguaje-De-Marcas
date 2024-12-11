@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+ 
+ 
+    <style>
+        -- que el caption salgan uno detras de otro y el marco tambien
+        #contenedor{
+            width: 768px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #FFF;
+            border: 1px solid silver;
+            text-align: center;
+        }
+        #parametros{
+            width: 300px;
+            margin: 0px auto 20px auto;
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 1.3em;
+            font: normal 30pt Arial;
+            color: #15015B;
+            text-shadow: 0 1px 0 #CCC,
+            0 2px 0 #c9c9c9,
+            0 3px 0 #bbb,
+            0 4px 0 #b9b9b9,
+            0 5px 0 #aaa,
+            0 6px 1px rgba(0,0,0,.1),
+            0 0 5px rgba(0,0,0,.1),
+            0 1px 3px rgba(0,0,0,.3),
+            0 3px 5px rgba(0,0,0,.2),
+            0 5px 10px rgba(0,0,0,.25),
+            0 10px 10px rgba(0,0,0,.2),
+            0 20px 20px rgba(0,0,0,.15);
+        }
+        #divaños,#divmeses{
+            width: 100px;
+            margin: 0px auto 20px auto;
+            padding: 20px;
+            border-radius: 25px;
+            background-color: rgba(73,199,185,0.70);
+            text-shadow: 2px 2px 0px rgba(92,92,92,1.00);
+            -webkit-box-shadow: 5px 5px 5px 2px rgba(43,35,36,1.00);
+            box-shadow: 5px 5px 5px 2px rgba(43,35,36,1.00);
+            text-align:center;
+        }
+       
+    </style>
+ 
+    <script>
+        var arrayMeses=["ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO","JULIO","AGOSTO","SEPTIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"];
+        var semana=["L","M","X","J","V","S","D"];
+        function inicio(){
+            ponmeses();
+            ponaños();
+        }
+        function cabecera(vmes){
+            var cadena="";
+            cadena+="<CAPTION>"+arrayMeses[vmes] +"</CAPTION>";
+            cadena+="<thead>";
+            cadena+="<tr>";
+            for(var i=0;i<semana.length;i++){
+            cadena+="<th>"+semana[i]+"</th>";
+            }    
+            cadena+="</tr>";    
+            cadena+="</thead>";
+            return cadena;
+        }
+        function ponmeses(){
+            var destino=document.getElementById("divmeses");
+ 
+            var meses=document.createElement("select");
+            meses.setAttribute("id","cbmeses");
+            destino.appendChild(meses);
+            meses.addEventListener("change",()=>{cambio();})
+           
+            for(var i=0;i<arrayMeses.length;i++){
+                var op=document.createElement("option");
+                op.text=arrayMeses[i];
+                op.setAttribute("value",i);
+                meses.appendChild(op);
+            }
+        }
+        function ponaños(){
+            var destino=document.getElementById("divaños");
+            var fecha=new Date(); //Fecha del sistema
+            var anno=fecha.getFullYear(); //Año con 4 cifras
+ 
+            var annos=document.createElement("select");
+            annos.setAttribute("id","cbaños");
+            destino.appendChild(annos);
+            annos.addEventListener("change",()=>{cambio();}) //Cuando cambia el select que se vaya a la función cambio
+ 
+            for(var i=0;i<=50;i++){
+                var op=document.createElement("option");
+                op.setAttribute("value",anno+i);
+                op.text=anno+i;
+                annos.appendChild(op);
+            }
+        }
+        function cambio(){
+            var anno= document.getElementById("cbaños").value;
+            var mes=document.getElementById("cbmeses").value;
+            var inicio="<table border=1 align='center'>";
+             inicio +=cabecera(mes);
+          
+          
+            var fecha=new Date(anno,mes,1);
+            var nweek=fecha.getDay();
+            nweek--;
+            if (nweek==-1) nweek=6;
+  
+            var cadena="<tbody><tr>"
+            for(var i=1;i<=nweek;i++) cadena +="<td>&nbsp;</td>";
+  
+  
+             var mes=fecha.getMonth();   //nº mes 0-11;
+             while(fecha.getMonth()==mes){
+          
+             cadena +="<td>"+fecha.getDate()+"</td>";
+             if (nweek==6) cadena +="</tr><tr>"
+                 fecha.setDate(fecha.getDate()+1);
+                nweek=fecha.getDay();
+                nweek--;
+                if (nweek==-1) nweek=6;
+            }
+             cadena +="</tr></tbody></table>";
+            document.getElementById("calendario").innerHTML=inicio+cadena;
+         }
+        window.addEventListener("load",()=>{inicio();})
+ 
+    </script>
+</head>
+<body>
+   
+</body>
+<div id="cabe"></div>
+ 
+    <div id="contenedor">
+    <h2>Ejercicio Javascript: Calendario</h2>
+    <div id="parametros">
+        <div id="divaños"></div>
+        <div id="divmeses"></div>
+        <div style="clear: both"></div>
+    </div>
+    </div>
+    <div id="calendario"></div>
+ 
+</html>

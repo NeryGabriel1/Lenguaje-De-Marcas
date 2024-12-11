@@ -1,0 +1,22 @@
+#marco1990 {
+    width: 400px;
+    height: 100%;
+    margin: 20px auto 0px auto;
+    padding: 10px;
+    line-height: 57px;
+}
+
+#mensaje,
+#inicio {
+    text-align: center;
+    font-size: 2rem;
+    background-color: red;
+    color: white;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#inicio {
+    background-color: purple;
+}
